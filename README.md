@@ -5,7 +5,7 @@ A game made by *these fine men*<sup>[1](https://github.com/SFR-git)[2](https://g
 hello i'm a placeholder
 
 ## Play the game
-This game was made with WebGL in mind, in order to submit it on itch.io. You can play it [here](https://trollface.dk).
+This game was made with WebGL in mind, in order to submit it on itch.io. You can play it [here](https://itch.io/fourth-men/trollface).
 With that in mind, if you want to install the game locally, you will find releases on the [releases page](https://github.com/SFR-git/4thmen-bj4/releases).
 
 ## Credits
