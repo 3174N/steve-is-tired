@@ -10,7 +10,7 @@ With that in mind, if you want to install the game locally, you will find releas
 
 ## Credits
 ### Creators
-![fourthmen logo](Logos/fourthmen-logo.png)
+<img src="Logos/fourthmen-logo.png" height="200" width="200"/>
 
 Hello. We're the Fourth Men. 
 * [3174N](https://github.com/3174N) did this
