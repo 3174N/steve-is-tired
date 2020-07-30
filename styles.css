@@ -139,9 +139,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Kalam", sans-serif;
 }
 
-a
-{
-	color: #0077aa;
+a, a:visited {
+    color: #0077aa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 .logo img{
