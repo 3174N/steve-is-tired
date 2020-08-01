@@ -11,7 +11,7 @@ header {
     position: fixed;
     justify-content: space-between;
     align-items: left;
-    margin: -80px -320px;
+    margin: 1% 2%;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -128,11 +128,11 @@ header {
 }
 
 /* Main */
-body {
+.container {
 	background-color: #fff;
 	color: #454545;
 	font-family: "Ubuntu", sans-serif;
-	margin: 100px 20%;
+	padding: 100px 20%;
 	text-align: left;
 }
 
