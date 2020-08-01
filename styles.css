@@ -7,11 +7,12 @@
 
 /* Nav-bar */
 header {
-	display: flex;
+    display: flex;
+    position: fixed;
     justify-content: space-between;
     align-items: left;
-    padding: 10px 10px;
-    background-color: #ffffff;
+    margin: -80px -320px;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .logo {
@@ -131,8 +132,8 @@ body {
 	background-color: #fff;
 	color: #454545;
 	font-family: "Ubuntu", sans-serif;
-	margin: 0;
-	text-align: center;
+	margin: 100px 20%;
+	text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
