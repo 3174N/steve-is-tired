@@ -62,7 +62,6 @@ public class Box : MonoBehaviour
         if (!isHeld)
         {
             playerIsIn = false;
-            holder = null;
         }
     }
 
