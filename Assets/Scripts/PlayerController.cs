@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     float horizontal, vertical;
     Vector2 movement;
+    Vector2 lookDirection = new Vector2(1, 0);
 
     Rigidbody2D rb;
     #endregion
@@ -36,6 +37,12 @@ public class PlayerController : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
 
         movement.Set(horizontal, vertical);
+
+        if (!Mathf.Approximately(movement.x, 0.0f) || !Mathf.Approximately(movement.y, 0.0f))
+        {
+            lookDirection.Set(movement.x, movement.y);
+            lookDirection.Normalize();
+        }
 
         // Rewind
         if (Input.GetKeyDown(rewindKey))
