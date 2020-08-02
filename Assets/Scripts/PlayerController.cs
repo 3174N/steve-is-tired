@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     RewindBar rewindBar;
     float rewindTime;
     bool isRewinding;
+    bool isUsingJuice;
     List<PointInTime> pointsInTime;
 
     public KeyCode interactKey = KeyCode.E;
@@ -60,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
         // Rewind
         if (Input.GetKeyDown(rewindKey))
-            StartRewind();
+            StartRewind(true);
         if (Input.GetKeyUp(rewindKey))
             StopRewind();
 
@@ -112,7 +113,8 @@ public class PlayerController : MonoBehaviour
                 pointsInTime[0].switchSwitched.StateSwitch();
             pointsInTime.RemoveAt(0);
 
-            rewindTime -= Time.fixedDeltaTime;
+            if (isUsingJuice)
+                rewindTime -= Time.fixedDeltaTime;
         }
         else
         {
@@ -120,10 +122,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void StartRewind()
+    public void StartRewind(bool usingJuice)
     {
         isRewinding = true;
         rb.isKinematic = true;
+        isUsingJuice = usingJuice;
     }
 
     public void StopRewind()
@@ -137,5 +140,10 @@ public class PlayerController : MonoBehaviour
     {
         if (rewindTime <= 0)
             rewindTime = 0;
+    }
+
+    public void ResetRewindTime()
+    {
+        rewindTime = maxRewindTime;
     }
 }

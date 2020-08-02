@@ -9,7 +9,7 @@ public class RewindBar : MonoBehaviour
     Slider slider;
     #endregion
 
-    private void Start()
+    private void Awake()
     {
         slider = GetComponent<Slider>();
     }
