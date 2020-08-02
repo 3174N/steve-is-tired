@@ -64,11 +64,20 @@ public class PlayerController : MonoBehaviour
         if (!infiniteRewind)
         {
             if (rewindTime >= 0)
-                rewindText.text = Math.Round(rewindTime, 2).ToString();
+            {
+                if (rewindTime % 1 == 0)
+                    rewindText.text = Math.Round(rewindTime, 2).ToString() + ".00";
+                else
+                {
+                    if (rewindTime * 10 % 1 == 0)
+                        rewindText.text = Math.Round(rewindTime, 1).ToString() + "0";
+                    else
+                        rewindText.text = Math.Round(rewindTime, 2).ToString();
+                }
+            }
             else
                 rewindText.text = "0";
         }
-
         else
             rewindText.text = "";
     }
