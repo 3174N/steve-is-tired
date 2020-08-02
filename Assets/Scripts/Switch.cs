@@ -12,13 +12,17 @@ public class Switch : MonoBehaviour
     }
     public SwitchState state = SwitchState.Off;
 
+    public bool timePersistent = true;
+
     bool playerIsIn;
+
+    PlayerController player;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
@@ -26,14 +30,21 @@ public class Switch : MonoBehaviour
     {
         if (playerIsIn)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(player.interactkey))
             {
-                if (state == SwitchState.Off)
-                    state = SwitchState.On;
-                else
-                    state = SwitchState.Off;
+                StateSwitch();
+                if (!timePersistent)
+                    player.switchInteractingWith = this;
             }
         }
+    }
+
+    public void StateSwitch()
+    {
+        if (state == SwitchState.Off)
+            state = SwitchState.On;
+        else
+            state = SwitchState.Off;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
