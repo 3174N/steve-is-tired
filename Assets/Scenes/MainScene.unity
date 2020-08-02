@@ -711,6 +711,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4911047076216015247, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
       propertyPath: m_Name
       value: Box
@@ -1094,6 +1098,10 @@ PrefabInstance:
     - target: {fileID: 4160899041270644024, guid: b49d8b2c32de456408e2d7dacacdaab1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484903084901446809, guid: b49d8b2c32de456408e2d7dacacdaab1, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b49d8b2c32de456408e2d7dacacdaab1, type: 3}
