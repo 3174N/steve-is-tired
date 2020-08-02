@@ -17,11 +17,15 @@ public class EnemyController : MonoBehaviour
     bool isAttacking;
 
     CircleCollider2D circleCollider;
+    Rigidbody2D rb;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.zero;
+
         circleCollider = gameObject.AddComponent<CircleCollider2D>();
         circleCollider.radius = range / transform.localScale.x;
         circleCollider.isTrigger = true;
@@ -81,5 +85,10 @@ public class EnemyController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
         Gizmos.color = prevColor;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        rb.velocity = Vector2.zero;
     }
 }
