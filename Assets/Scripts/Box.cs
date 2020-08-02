@@ -32,7 +32,7 @@ public class Box : MonoBehaviour
     {
         if (isHeld)
         {
-            float offset = 1f;
+            float offset = 1.2f;
 
             string state = CheckDirection(holder.lookDirection);
             lastState = state == "" ? lastState : state;
