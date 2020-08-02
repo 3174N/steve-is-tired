@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     float horizontal, vertical;
     Vector2 movement;
-    Vector2 lookDirection = new Vector2(1, 0);
+    public Vector2 lookDirection = new Vector2(1, 0);
 
     Rigidbody2D rb;
     #endregion
