@@ -5,8 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     #region variables
-    public Switch @switch;
-    public Switch.SwitchState switchState;
+    public Trigger[] triggers;
 
     BoxCollider2D boxCollider;
     #endregion
@@ -20,20 +19,22 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (switchState == @switch.state)
-        {
-            // Door is open
-            boxCollider.isTrigger = true;
+        foreach (Trigger t in triggers) {
+            if (Trigger.TriggerState.On == t.state)
+            {
+                // Door is open
+                boxCollider.isTrigger = true;
 
-            // Add aniamtion?
-            // Color change is temporary
-            GetComponent<SpriteRenderer>().color = Color.green;
-        }
-        else
-        {
-            boxCollider.isTrigger = false;
+                // Add aniamtion?
+                // Color change is temporary
+                GetComponent<SpriteRenderer>().color = Color.green;
+            }
+            else
+            {
+                boxCollider.isTrigger = false;
 
-            GetComponent<SpriteRenderer>().color = Color.red;
+                GetComponent<SpriteRenderer>().color = Color.red;
+            }
         }
     }
 }

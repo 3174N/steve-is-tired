@@ -2,16 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Switch : MonoBehaviour
+public class Switch : Trigger
 {
     #region variables
-    public enum SwitchState
-    {
-        On,
-        Off
-    }
-    public SwitchState state = SwitchState.Off;
-
+    
     public bool timePersistent = true;
 
     public bool hasTimeLimit;
@@ -46,12 +40,12 @@ public class Switch : MonoBehaviour
 
         if (hasTimeLimit)
         {
-            if (state == SwitchState.On)
+            if (state == TriggerState.On)
                 timeLimit -= Time.deltaTime;
 
             if (timeLimit <= 0)
             {
-                state = SwitchState.Off;
+                state = TriggerState.Off;
                 timeLimit = maxTimeLimit;
             }
         }
@@ -59,14 +53,14 @@ public class Switch : MonoBehaviour
 
     public void StateSwitch()
     {
-        if (state == SwitchState.Off)
+        if (state == TriggerState.Off)
         {
-            state = SwitchState.On;
+            state = TriggerState.On;
             timeLimit = maxTimeLimit;
         }
         else
         {
-            state = SwitchState.Off;
+            state = TriggerState.Off;
             timeLimit = maxTimeLimit;
         }
     }
