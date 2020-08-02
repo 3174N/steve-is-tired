@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 3f;
 
     public KeyCode rewindKey = KeyCode.R;
+    public bool infiniteRewind = false;
     public float maxRewindTime = 5f;
     public float rewindSpeedMultiplier = 2f;
     float rewindTime;
@@ -74,11 +75,14 @@ public class PlayerController : MonoBehaviour
         if (rewindTime <= 0)
             return;
 
-        if (pointsInTime.Count > Mathf.Round((1 / Time.fixedDeltaTime) * rewindTime) + rewindSpeedMultiplier - 1)
+        if (!infiniteRewind)
         {
-            for (int i = 0; i < rewindSpeedMultiplier; i++)
+            if (pointsInTime.Count > Mathf.Round((1 / Time.fixedDeltaTime) * rewindTime) + rewindSpeedMultiplier - 1)
             {
-                pointsInTime.RemoveAt(pointsInTime.Count - 1);
+                for (int i = 0; i < rewindSpeedMultiplier; i++)
+                {
+                    pointsInTime.RemoveAt(pointsInTime.Count - 1);
+                }
             }
         }
 
