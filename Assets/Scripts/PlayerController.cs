@@ -4,10 +4,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     #region variables
-    public float speed;
+    public float speed = 3f;
 
     public KeyCode rewindKey = KeyCode.R;
-    public float maxRewindTime;
+    public float maxRewindTime = 5f;
     float rewindTime;
     bool isRewinding;
     List<Vector2> positions;
