@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -10,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public KeyCode rewindKey = KeyCode.R;
     public bool infiniteRewind = false;
     public float maxRewindTime = 5f;
+    public TextMeshProUGUI rewindText;
     public float rewindSpeedMultiplier = 2f;
     float rewindTime;
     bool isRewinding;
@@ -57,6 +60,17 @@ public class PlayerController : MonoBehaviour
             StartRewind();
         if (Input.GetKeyUp(rewindKey))
             StopRewind();
+
+        if (!infiniteRewind)
+        {
+            if (rewindTime >= 0)
+                rewindText.text = Math.Round(rewindTime, 2).ToString();
+            else
+                rewindText.text = "0";
+        }
+
+        else
+            rewindText.text = "";
     }
 
     void FixedUpdate()
@@ -119,4 +133,10 @@ public class PlayerController : MonoBehaviour
         rb.isKinematic = false;
     }
     #endregion
+
+    private void OnValidate()
+    {
+        if (rewindTime <= 0)
+            rewindTime = 0;
+    }
 }
