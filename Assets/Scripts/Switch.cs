@@ -28,7 +28,6 @@ public class Switch : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Yay");
                 if (state == SwitchState.Off)
                     state = SwitchState.On;
                 else
