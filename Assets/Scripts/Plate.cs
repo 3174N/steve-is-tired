@@ -5,9 +5,10 @@ using UnityEngine.PlayerLoop;
 
 public class Plate : Trigger
 {
-
+    #region variables
     public Box box;
     public bool isTouchingBox = false;
+    #endregion
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
