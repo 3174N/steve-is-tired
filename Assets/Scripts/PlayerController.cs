@@ -10,7 +10,11 @@ public class PlayerController : MonoBehaviour
     public float maxRewindTime = 5f;
     float rewindTime;
     bool isRewinding;
-    List<Vector2> positions;
+    List<PointInTime> pointsInTime;
+
+    public KeyCode interactkey = KeyCode.E;
+    [HideInInspector]
+    public Switch switchInteractingWith;
 
     float horizontal, vertical;
     Vector2 movement;
@@ -24,7 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        positions = new List<Vector2>();
+        pointsInTime = new List<PointInTime>();
 
         rewindTime = maxRewindTime;
     }
@@ -67,20 +71,23 @@ public class PlayerController : MonoBehaviour
         if (rewindTime <= 0)
             return;
 
-        if (positions.Count > Mathf.Round((1 / Time.fixedDeltaTime) * rewindTime))
+        if (pointsInTime.Count > Mathf.Round((1 / Time.fixedDeltaTime) * rewindTime))
         {
-            positions.RemoveAt(positions.Count - 1);
+            pointsInTime.RemoveAt(pointsInTime.Count - 1);
         }
 
-        positions.Insert(0, rb.position);
+        pointsInTime.Insert(0, new PointInTime(rb.position, switchInteractingWith));
+        switchInteractingWith = null;
     }
 
     void Rewind()
     {
-        if (positions.Count > 0)
+        if (pointsInTime.Count > 0)
         {
-            rb.MovePosition(positions[0]);
-            positions.RemoveAt(0);
+            rb.MovePosition(pointsInTime[0].position);
+            if (pointsInTime[0].switchSwitched != null)
+                pointsInTime[0].switchSwitched.StateSwitch();
+            pointsInTime.RemoveAt(0);
 
             rewindTime -= Time.fixedDeltaTime;
         }
