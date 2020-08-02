@@ -5,7 +5,7 @@ using UnityEngine;
 public class Box : MonoBehaviour
 {
     #region variables
-    bool isHeld = false;
+    public bool isHeld = false;
     bool playerIsIn = false;
     PlayerController holder;
 
