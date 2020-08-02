@@ -123,5 +123,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 3
-  timeBetweenAttacks: 2
-  attackLength: 5
+  timeBetweenAttacks: 5
+  attackLength: 2

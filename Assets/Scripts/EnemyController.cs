@@ -65,7 +65,7 @@ public class EnemyController : MonoBehaviour
     {
         PlayerController player = collision.GetComponent<PlayerController>();
         if (player != null)
-            player.StartRewind();
+            player.StartRewind(false);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
