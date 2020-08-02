@@ -6,7 +6,7 @@ public class Door : MonoBehaviour
 {
     #region variables
     public Trigger.TriggerState triggerState;
-    public Trigger[] triggers;
+    public DoorTrigger[] triggers;
 
     bool shouldOpen = true;
 
@@ -25,9 +25,9 @@ public class Door : MonoBehaviour
         for (int i = 0; i < triggers.Length; i++)
         {
             if (i == 0)
-                shouldOpen = triggers[i].state == triggerState;
+                shouldOpen = triggers[i].trigger.state == triggers[i].state;
             else
-                shouldOpen = (triggers[i].state == triggerState) && shouldOpen;
+                shouldOpen = (triggers[i].trigger.state == triggers[i].state) && shouldOpen;
         }
 
         if (shouldOpen)
