@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Plate : Trigger
 {
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Enter");
         Box box = collision.GetComponent<Box>();
         if (box != null && !box.isHeld) state = TriggerState.On;
     }
