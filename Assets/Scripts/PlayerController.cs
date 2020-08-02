@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
         if (pointsInTime.Count > Mathf.Round((1 / Time.fixedDeltaTime) * rewindTime))
         {
             pointsInTime.RemoveAt(pointsInTime.Count - 1);
+            pointsInTime.RemoveAt(pointsInTime.Count - 1);
         }
 
         pointsInTime.Insert(0, new PointInTime(rb.position, switchInteractingWith));
