@@ -14,6 +14,10 @@ public class Switch : MonoBehaviour
 
     public bool timePersistent = true;
 
+    public bool hasTimeLimit;
+    public float maxTimeLimit;
+    float timeLimit;
+
     bool playerIsIn;
 
     PlayerController player;
@@ -23,6 +27,8 @@ public class Switch : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+
+        timeLimit = maxTimeLimit;
     }
 
     // Update is called once per frame
@@ -37,14 +43,32 @@ public class Switch : MonoBehaviour
                     player.switchInteractingWith = this;
             }
         }
+
+        if (hasTimeLimit)
+        {
+            if (state == SwitchState.On)
+                timeLimit -= Time.deltaTime;
+
+            if (timeLimit <= 0)
+            {
+                state = SwitchState.Off;
+                timeLimit = maxTimeLimit;
+            }
+        }
     }
 
     public void StateSwitch()
     {
         if (state == SwitchState.Off)
+        {
             state = SwitchState.On;
+            timeLimit = maxTimeLimit;
+        }
         else
+        {
             state = SwitchState.Off;
+            timeLimit = maxTimeLimit;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
