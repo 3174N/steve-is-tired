@@ -5,7 +5,6 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     #region variables
-    public Trigger.TriggerState triggerState;
     public DoorTrigger[] triggers;
 
     bool shouldOpen = true;
