@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
 
     public KeyCode rewindKey = KeyCode.R;
     public float maxRewindTime = 5f;
-    public float rewindSpeedMultiplier = 2f;;
+    public float rewindSpeedMultiplier = 2f;
     float rewindTime;
     bool isRewinding;
     List<PointInTime> pointsInTime;
