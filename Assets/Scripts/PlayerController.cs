@@ -12,8 +12,8 @@ public class PlayerController : MonoBehaviour
     public KeyCode rewindKey = KeyCode.R;
     public bool infiniteRewind = false;
     public float maxRewindTime = 5f;
-    public TextMeshProUGUI rewindText;
     public float rewindSpeedMultiplier = 2f;
+    RewindBar rewindBar;
     float rewindTime;
     bool isRewinding;
     List<PointInTime> pointsInTime;
@@ -34,10 +34,13 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rewindBar = FindObjectOfType<RewindBar>();
 
         pointsInTime = new List<PointInTime>();
 
         rewindTime = maxRewindTime;
+        rewindBar.SetMaxRewind(maxRewindTime);
+        rewindBar.SetRewind(rewindTime);
     }
 
     // Update is called once per frame
@@ -63,23 +66,10 @@ public class PlayerController : MonoBehaviour
 
         if (!infiniteRewind)
         {
-            if (rewindTime >= 0)
-            {
-                if (rewindTime % 1 == 0)
-                    rewindText.text = Math.Round(rewindTime, 2).ToString() + ".00";
-                else
-                {
-                    if (rewindTime * 10 % 1 == 0)
-                        rewindText.text = Math.Round(rewindTime, 1).ToString() + "0";
-                    else
-                        rewindText.text = Math.Round(rewindTime, 2).ToString();
-                }
-            }
-            else
-                rewindText.text = "0";
+            rewindBar.SetRewind(rewindTime);
         }
         else
-            rewindText.text = "";
+            rewindBar.gameObject.SetActive(false);
     }
 
     void FixedUpdate()
