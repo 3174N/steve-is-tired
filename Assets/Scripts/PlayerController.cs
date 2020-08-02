@@ -141,4 +141,9 @@ public class PlayerController : MonoBehaviour
         if (rewindTime <= 0)
             rewindTime = 0;
     }
+
+    public void ResetRewindTime()
+    {
+        rewindTime = maxRewindTime;
+    }
 }
