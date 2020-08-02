@@ -5,7 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     #region variables
-    public Trigger.TriggerState state;
+    public Trigger.TriggerState triggerState;
     public Trigger[] triggers;
 
     BoxCollider2D boxCollider;
@@ -22,7 +22,7 @@ public class Door : MonoBehaviour
     {
         foreach (Trigger t in triggers) 
         {
-            if (state == t.state)
+            if (triggerState == t.state)
             {
                 // Door is open
                 boxCollider.isTrigger = true;
