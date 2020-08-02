@@ -12,12 +12,13 @@ public class PlayerController : MonoBehaviour
     bool isRewinding;
     List<PointInTime> pointsInTime;
 
-    public KeyCode interactkey = KeyCode.E;
+    public KeyCode interactKey = KeyCode.E;
     [HideInInspector]
     public Switch switchInteractingWith;
 
     float horizontal, vertical;
     Vector2 movement;
+    [HideInInspector]
     public Vector2 lookDirection = new Vector2(1, 0);
 
     Rigidbody2D rb;
@@ -71,7 +72,7 @@ public class PlayerController : MonoBehaviour
         if (rewindTime <= 0)
             return;
 
-        if (pointsInTime.Count > Mathf.Round((1 / Time.fixedDeltaTime) * rewindTime))
+        if (pointsInTime.Count > Mathf.Round((1 / Time.fixedDeltaTime) * rewindTime) + 1)
         {
             pointsInTime.RemoveAt(pointsInTime.Count - 1);
             pointsInTime.RemoveAt(pointsInTime.Count - 1);

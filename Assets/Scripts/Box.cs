@@ -21,7 +21,7 @@ public class Box : MonoBehaviour
     {
         if (playerIsIn)
         {
-            if (Input.GetKeyDown(holder.interactkey))
+            if (Input.GetKeyDown(holder.interactKey))
             {
                 isHeld = !isHeld;
                 Debug.Log("Holding" + holder);

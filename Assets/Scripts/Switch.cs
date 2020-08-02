@@ -36,7 +36,7 @@ public class Switch : MonoBehaviour
     {
         if (playerIsIn)
         {
-            if (Input.GetKeyDown(player.interactkey))
+            if (Input.GetKeyDown(player.interactKey))
             {
                 StateSwitch();
                 if (!timePersistent)
