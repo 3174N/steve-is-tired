@@ -5,6 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     #region variables
+    public Trigger.TriggerState state;
     public Trigger[] triggers;
 
     BoxCollider2D boxCollider;
@@ -19,8 +20,9 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Trigger t in triggers) {
-            if (Trigger.TriggerState.On == t.state)
+        foreach (Trigger t in triggers) 
+        {
+            if (state == t.state)
             {
                 // Door is open
                 boxCollider.isTrigger = true;
