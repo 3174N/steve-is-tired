@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     List<PointInTime> pointsInTime;
 
     public KeyCode interactkey = KeyCode.E;
+    [HideInInspector]
     public Switch switchInteractingWith;
 
     float horizontal, vertical;

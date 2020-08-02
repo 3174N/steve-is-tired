@@ -430,6 +430,8 @@ MonoBehaviour:
   speed: 3
   rewindKey: 114
   maxRewindTime: 5
+  interactkey: 101
+  switchInteractingWith: {fileID: 0}
 --- !u!50 &571261555
 Rigidbody2D:
   serializedVersion: 4
@@ -535,6 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 1
+  timePersistent: 0
 --- !u!212 &1180678390
 SpriteRenderer:
   m_ObjectHideFlags: 0
