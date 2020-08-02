@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class Box : MonoBehaviour
 {
-
     #region variables
-
     bool isHeld = false;
     bool playerIsIn = false;
     PlayerController holder;
-    string lastState;
 
+    string lastState;
     #endregion
+
+    private void Start()
+    {
+        holder = FindObjectOfType<PlayerController>();
+    }
 
     void Update()
     {
         if (playerIsIn)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(holder.interactkey))
             {
                 isHeld = !isHeld;
                 Debug.Log("Holding" + holder);
@@ -51,7 +54,6 @@ public class Box : MonoBehaviour
         if (player != null)
         {
             playerIsIn = true;
-            holder = player;
         }
     }
 
