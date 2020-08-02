@@ -8,6 +8,8 @@ public class Door : MonoBehaviour
     public Trigger.TriggerState triggerState;
     public Trigger[] triggers;
 
+    bool shouldOpen = true;
+
     BoxCollider2D boxCollider;
     #endregion
 
@@ -20,23 +22,28 @@ public class Door : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (Trigger t in triggers) 
+        for (int i = 0; i < triggers.Length; i++)
         {
-            if (triggerState == t.state)
-            {
-                // Door is open
-                boxCollider.isTrigger = true;
-
-                // Add aniamtion?
-                // Color change is temporary
-                GetComponent<SpriteRenderer>().color = Color.green;
-            }
+            if (i == 0)
+                shouldOpen = triggers[i].state == triggerState;
             else
-            {
-                boxCollider.isTrigger = false;
+                shouldOpen = (triggers[i].state == triggerState) && shouldOpen;
+        }
 
-                GetComponent<SpriteRenderer>().color = Color.red;
-            }
+        if (shouldOpen)
+        {
+            // Door is open
+            boxCollider.isTrigger = true;
+
+            // Add aniamtion?
+            // Color change is temporary
+            GetComponent<SpriteRenderer>().color = Color.green;
+        }
+        else
+        {
+            boxCollider.isTrigger = false;
+
+            GetComponent<SpriteRenderer>().color = Color.red;
         }
     }
 }
