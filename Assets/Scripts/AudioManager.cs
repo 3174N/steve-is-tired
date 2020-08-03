@@ -50,6 +50,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound \"" + name + "\" not found!");
             return;
         }
+        s.source.Play();
     }
 
     /// <summary>
@@ -65,5 +66,13 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Stop();
+    }
+
+    public void StopAll()
+    {
+        foreach (Sound sound in sounds)
+        {
+            sound.source.Stop();
+        }
     }
 }
