@@ -649,6 +649,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3163009578601619683, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163009578601619683, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4911047076216015247, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
       propertyPath: m_Name
       value: Box
@@ -697,7 +705,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1127157166531330092, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
 --- !u!1 &1333759930
 GameObject:

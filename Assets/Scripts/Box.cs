@@ -24,41 +24,29 @@ public class Box : MonoBehaviour
     void Update()
     {
         if (playerIsIn)
-        {
+        {   
             if (Input.GetKeyDown(holder.interactKey))
             {
-                isHeld = !isHeld;
+                isHeld = true;
+                transform.parent = holder.transform;
+                if (holder.lookDirection == holder.GetComponent<Rigidbody2D>().position - rb.position)
+                {
+                    Debug.Log("Push");
+                }
+                //rb.isKinematic = false;
             }
-        }
-        if (!isHeld)
-        {
-            rb.isKinematic = true;
-            GetComponent<PointEffector2D>().enabled = false;
-        }
-        else
-        {
-            rb.isKinematic = false;
-            GetComponent<PointEffector2D>().enabled = true;
+            if (Input.GetKeyUp(holder.interactKey))
+            {
+                isHeld = false;
+                transform.parent = null;
+                //rb.isKinematic = true;
+            }
         }
     }
 
     private void LateUpdate()
     {
-        if (isHeld)
-        {
-            float offset = 1.5f;
-
-            string state = CheckDirection(holder.lookDirection);
-            lastState = state == "" ? lastState : state;
-            if (lastState == "LEFT")
-                rb.MovePosition(new Vector2(holder.transform.position.x + offset, holder.transform.position.y));
-            else if (lastState == "RIGHT")
-                rb.MovePosition(new Vector2(holder.transform.position.x - offset, holder.transform.position.y));
-            else if (lastState == "UP")
-                rb.MovePosition(new Vector2(holder.transform.position.x, holder.transform.position.y + offset));
-            else if (lastState == "DOWN")
-                rb.MovePosition(new Vector2(holder.transform.position.x, holder.transform.position.y - offset));
-        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -74,21 +62,20 @@ public class Box : MonoBehaviour
     {
         if (!isHeld)
         {
+            transform.parent = null;
             playerIsIn = false;
         }
     }
 
-    private string CheckDirection(Vector2 dir)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (dir == new Vector2(1, 0))
-            return "LEFT";
-        if (dir == new Vector2(-1, 0))
-            return "RIGHT";
-        if (dir == new Vector2(0, 1))
-            return "UP";
-        if (dir == new Vector2(0, -1))
-            return "DOWN";
+        rb.isKinematic = false;
+        rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
+    }
 
-        else return "";
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        rb.isKinematic = true;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }
