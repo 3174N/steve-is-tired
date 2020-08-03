@@ -1,11 +1,13 @@
+sudo: required
 language: objective-c
-osx_image: xcode8.1
-rvm:
-- 2.2
-before_install:
-- chmod a+x ./Scripts/install.sh
-- chmod a+x ./Scripts/build.sh
+osx_image: xcode11.2
+cache:
+  timeout: 86400 # 1 day
+  directories:
+    - $HOME/cache/
 install:
-- ./Scripts/install.sh
+  - bash <(curl -fsSL https://raw.githubusercontent.com/neogeek/unity-ci-tools/v1.0.0/bin/install.sh)
 script:
-- ./Scripts/build.sh
+  - bash <(curl -fsSL https://raw.githubusercontent.com/neogeek/unity-ci-tools/v1.0.0/bin/auth.sh)
+  - bash <(curl -fsSL https://raw.githubusercontent.com/neogeek/unity-ci-tools/v1.0.0/bin/test.sh)
+  - bash <(curl -fsSL https://raw.githubusercontent.com/neogeek/unity-ci-tools/v1.0.0/bin/deauth.sh)
