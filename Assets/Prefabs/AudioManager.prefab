@@ -51,3 +51,10 @@ MonoBehaviour:
     loop: 1
     type: 1
     source: {fileID: 0}
+  - name: Energy Drink
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 1
+    type: 1
+    source: {fileID: 0}

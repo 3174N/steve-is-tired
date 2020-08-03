@@ -15,11 +15,11 @@ public class AudioEditor : Editor
         for (int i = 0; i < sound.sounds.Length; i++)
         {
             GUILayout.BeginHorizontal();
-            if (GUILayout.Button("Play " + sound.sounds[i].name))
+            if (GUILayout.Button("Play \"" + sound.sounds[i].name + '"'))
             {
                 sound.Play(sound.sounds[i].name);
             }
-            if (GUILayout.Button("Stop " + sound.sounds[i].name))
+            if (GUILayout.Button("Stop \"" + sound.sounds[i].name + '"'))
             {
                 sound.Stop(sound.sounds[i].name);
             }
