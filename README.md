@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/SFR-git/4thmen-bj4.svg?branch=travis-config)](https://travis-ci.com/SFR-git/4thmen-bj4)
+[![Build Status](https://travis-ci.com/SFR-git/4thmen-bj4.svg?branch=master)](https://travis-ci.com/SFR-git/4thmen-bj4)
 # NAME TBA
 A game made by *these fine men*<sup>[1](https://github.com/SFR-git)[2](https://github.com/3174N)[3](https://github.com/g33king)[4](https://github.com/TEmadethemistakeofbeingongithub)</sup> for the [Brackeys Game Jam 2020.2](https://itch.io/jam/brackeys-4).
 
