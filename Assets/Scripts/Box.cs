@@ -10,11 +10,15 @@ public class Box : MonoBehaviour
     PlayerController holder;
 
     string lastState;
+
+    Rigidbody2D rb;
     #endregion
 
     private void Start()
     {
         holder = FindObjectOfType<PlayerController>();
+
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -37,13 +41,13 @@ public class Box : MonoBehaviour
             string state = CheckDirection(holder.lookDirection);
             lastState = state == "" ? lastState : state;
             if (lastState == "LEFT")
-                transform.position = new Vector2(holder.transform.position.x + offset, holder.transform.position.y);
+                rb.MovePosition(new Vector2(holder.transform.position.x + offset, holder.transform.position.y));
             else if (lastState == "RIGHT")
-                transform.position = new Vector2(holder.transform.position.x - offset, holder.transform.position.y);
+                rb.MovePosition(new Vector2(holder.transform.position.x - offset, holder.transform.position.y));
             else if (lastState == "UP")
-                transform.position = new Vector2(holder.transform.position.x, holder.transform.position.y + offset);
+                rb.MovePosition(new Vector2(holder.transform.position.x, holder.transform.position.y + offset));
             else if (lastState == "DOWN")
-                transform.position = new Vector2(holder.transform.position.x, holder.transform.position.y - offset);
+                rb.MovePosition(new Vector2(holder.transform.position.x, holder.transform.position.y - offset));
         }
     }
 
