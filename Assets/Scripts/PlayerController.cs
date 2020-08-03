@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("Look X", lookDirection.x);
         animator.SetFloat("Look Y", lookDirection.y);
+        animator.SetFloat("Speed", movement.magnitude);
 
         // Rewind
         if (Input.GetKeyDown(rewindKey))

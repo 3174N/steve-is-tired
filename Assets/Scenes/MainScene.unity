@@ -153,7 +153,7 @@ PrefabInstance:
     - target: {fileID: 7961387594524460645, guid: 8cdbffe0b3996e14c8e8128a25998b87, type: 3}
       propertyPath: triggers.Array.data[0].trigger
       value: 
-      objectReference: {fileID: 1759273570}
+      objectReference: {fileID: 512014365}
     - target: {fileID: 7961387594524460645, guid: 8cdbffe0b3996e14c8e8128a25998b87, type: 3}
       propertyPath: triggers.Array.data[1].trigger
       value: 
