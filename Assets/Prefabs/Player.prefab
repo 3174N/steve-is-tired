@@ -148,7 +148,6 @@ MonoBehaviour:
   rewindKey: 114
   infiniteRewind: 0
   maxRewindTime: 5
-  rewindText: {fileID: 0}
   rewindSpeedMultiplier: 2
   interactKey: 101
   switchInteractingWith: {fileID: 0}
