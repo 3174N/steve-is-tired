@@ -23,29 +23,47 @@ public class Box : MonoBehaviour
 
     void Update()
     {
+        Vector2 direction = -(holder.GetComponent<Rigidbody2D>().position - rb.position);
+        direction.x = Mathf.Round(direction.x);
+        direction.y = Mathf.Round(direction.y);
         if (playerIsIn)
-        {   
+        {
             if (Input.GetKeyDown(holder.interactKey))
             {
                 isHeld = true;
                 transform.parent = holder.transform;
-                if (holder.lookDirection == holder.GetComponent<Rigidbody2D>().position - rb.position)
+            }
+            if (Input.GetKey(holder.interactKey))
+            {
+                if (holder.lookDirection == direction)
                 {
-                    Debug.Log("Push");
+                    if (direction.x > 0)
+                    {
+                        direction.Set(0.01f, 0);
+                    }
+                    else if (direction.x < 0)
+                    {
+                        direction.Set(-0.01f, 0);
+                    }
+                    else if (direction.y > 0)
+                    {
+                        direction.Set(0, 0.01f);
+                    }
+                    else if (direction.y < 0)
+                    {
+                        direction.Set(0, -0.01f);
+                    }
+                    rb.position += direction;
                 }
-                //rb.isKinematic = false;
             }
             if (Input.GetKeyUp(holder.interactKey))
             {
                 isHeld = false;
                 transform.parent = null;
-                //rb.isKinematic = true;
             }
         }
 
-        //Debug.Log((holder.transform.position - transform.position).magnitude);
-
-        if ((holder.transform.position - transform.position).magnitude > 1.2)
+        if (direction.magnitude > 1.2)
         {
             transform.parent = null;
         }
@@ -58,7 +76,7 @@ public class Box : MonoBehaviour
         {
             playerIsIn = true;
         }
-        else
+        else if (!collision.isTrigger)
         {
             rb.isKinematic = false;
             rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
