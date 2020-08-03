@@ -122,5 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892a0766f682cd64fb36d324c4f6ef4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switch: {fileID: 0}
-  switchState: 0
+  triggers:
+  - trigger: {fileID: 0}
+    state: 0

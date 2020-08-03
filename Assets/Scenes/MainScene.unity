@@ -135,10 +135,6 @@ PrefabInstance:
       value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 7961387594524460645, guid: 8cdbffe0b3996e14c8e8128a25998b87, type: 3}
-      propertyPath: triggers.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7961387594524460645, guid: 8cdbffe0b3996e14c8e8128a25998b87, type: 3}
       propertyPath: switch
       value: 
       objectReference: {fileID: 512014365}
@@ -202,10 +198,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7961387594524460647, guid: 8cdbffe0b3996e14c8e8128a25998b87, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cdbffe0b3996e14c8e8128a25998b87, type: 3}
 --- !u!1 &140271420
@@ -470,6 +462,8 @@ GameObject:
   - component: {fileID: 460830598}
   - component: {fileID: 460830597}
   - component: {fileID: 460830596}
+  - component: {fileID: 460830599}
+  - component: {fileID: 460830600}
   m_Layer: 0
   m_Name: EnergyDrink
   m_TagString: Untagged
@@ -561,6 +555,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &460830599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460830595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b8d131b785f8842b11713ed4803f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &460830600
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460830595}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.59375, y: 0.875}
+    newSize: {x: 0.19, y: 0.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.59375, y: 0.875}
+  m_EdgeRadius: 0
 --- !u!114 &512014365 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8147110703630798153, guid: 7031c973611014d4886b4303dc6eb986, type: 3}
@@ -572,37 +604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dac1cc9a27c2b9846a2b66a2ea56e56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &729743246 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4911047076216015247, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
-  m_PrefabInstance: {fileID: 1026917245}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &729743252
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729743246}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
-  m_EdgeRadius: 0
 --- !u!1 &778133291
 GameObject:
   m_ObjectHideFlags: 0
@@ -765,6 +766,14 @@ PrefabInstance:
       propertyPath: rewindBar
       value: 
       objectReference: {fileID: 1935805293}
+    - target: {fileID: 970666039399771476, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.13258857
+      objectReference: {fileID: 0}
+    - target: {fileID: 970666039399771476, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.13258857
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
 --- !u!1001 &1026917245
@@ -774,42 +783,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3163009578601619683, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
-      propertyPath: m_SpriteTilingProperty.border.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
-      propertyPath: m_SpriteTilingProperty.border.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
-      propertyPath: m_SpriteTilingProperty.border.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
-      propertyPath: m_SpriteTilingProperty.border.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
-      propertyPath: m_Size.x
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
-      propertyPath: m_Size.y
-      value: 0.32
-      objectReference: {fileID: 0}
     - target: {fileID: 4911047076216015247, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
       propertyPath: m_Name
       value: Box
