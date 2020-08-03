@@ -8,6 +8,8 @@ public class Plate : Trigger
     #region variables
     public Box box;
     public bool isTouchingBox = false;
+
+    public Sprite sprNotPressed, sprPressed;
     #endregion
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +27,16 @@ public class Plate : Trigger
         if (box == null) return;
         if (isTouchingBox && !box.isHeld) state = TriggerState.On;
         else state = TriggerState.Off;
+
+        // texture
+        if (state == TriggerState.On)
+        {
+            GetComponent<SpriteRenderer>().sprite = sprPressed;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = sprNotPressed;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
