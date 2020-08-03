@@ -765,6 +765,14 @@ PrefabInstance:
       propertyPath: rewindBar
       value: 
       objectReference: {fileID: 1935805293}
+    - target: {fileID: 970666039399771476, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 970666039399771476, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
 --- !u!1001 &1026917245
