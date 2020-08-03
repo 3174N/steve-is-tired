@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public float maxRewindTime = 5f;
     public float rewindSpeedMultiplier = 2f;
     RewindBar rewindBar;
-    float rewindTime;
+    public float rewindTime;
     bool isRewinding;
     bool isUsingJuice;
     List<PointInTime> pointsInTime;
