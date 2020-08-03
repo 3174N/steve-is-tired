@@ -930,30 +930,6 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.32
       objectReference: {fileID: 0}
-    - target: {fileID: 2635995365865073012, guid: 2fccd0a22e7642c4483c6e4e48227209, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.105
-      objectReference: {fileID: 0}
-    - target: {fileID: 2635995365865073012, guid: 2fccd0a22e7642c4483c6e4e48227209, type: 3}
-      propertyPath: m_Size.y
-      value: 0.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2635995365865073012, guid: 2fccd0a22e7642c4483c6e4e48227209, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2635995365865073012, guid: 2fccd0a22e7642c4483c6e4e48227209, type: 3}
-      propertyPath: m_Size.x
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 2635995365865073013, guid: 2fccd0a22e7642c4483c6e4e48227209, type: 3}
-      propertyPath: sprNotPressed
-      value: 
-      objectReference: {fileID: -4795573259988461060, guid: d52c86869c47f15448fd88b2968f667f, type: 3}
-    - target: {fileID: 2635995365865073013, guid: 2fccd0a22e7642c4483c6e4e48227209, type: 3}
-      propertyPath: sprPressed
-      value: 
-      objectReference: {fileID: 330159055237114263, guid: d52c86869c47f15448fd88b2968f667f, type: 3}
     - target: {fileID: 2635995365865073014, guid: 2fccd0a22e7642c4483c6e4e48227209, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
