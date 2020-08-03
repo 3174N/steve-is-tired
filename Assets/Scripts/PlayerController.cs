@@ -29,12 +29,14 @@ public class PlayerController : MonoBehaviour
     public Vector2 lookDirection = new Vector2(1, 0);
 
     Rigidbody2D rb;
+    Animator animator;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         rewindBar = FindObjectOfType<RewindBar>();
 
         pointsInTime = new List<PointInTime>();
@@ -58,6 +60,9 @@ public class PlayerController : MonoBehaviour
             lookDirection.Set(movement.x, movement.y);
             lookDirection.Normalize();
         }
+
+        animator.SetFloat("Look X", lookDirection.x);
+        animator.SetFloat("Look Y", lookDirection.y);
 
         // Rewind
         if (Input.GetKeyDown(rewindKey))
