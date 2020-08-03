@@ -41,15 +41,15 @@ public class Box : MonoBehaviour
                     {
                         direction.Set(0.01f, 0);
                     }
-                    else if (direction.x < 0)
+                    if (direction.x < 0)
                     {
                         direction.Set(-0.01f, 0);
                     }
-                    else if (direction.y > 0)
+                    if (direction.y > 0)
                     {
                         direction.Set(0, 0.01f);
                     }
-                    else if (direction.y < 0)
+                    if (direction.y < 0)
                     {
                         direction.Set(0, -0.01f);
                     }
