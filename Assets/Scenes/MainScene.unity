@@ -783,6 +783,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3973243797748801749, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973243797748801749, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973243797748801749, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973243797748801749, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973243797748801749, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973243797748801749, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973243797748801749, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2503062
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973243797748801749, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2503062
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.34736013
+      objectReference: {fileID: 0}
+    - target: {fileID: 4911047076216015246, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.34736016
+      objectReference: {fileID: 0}
     - target: {fileID: 4911047076216015247, guid: ae1cac20e05e9774c94f7ec7014b346f, type: 3}
       propertyPath: m_Name
       value: Box
