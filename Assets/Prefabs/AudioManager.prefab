@@ -55,6 +55,27 @@ MonoBehaviour:
     clip: {fileID: 0}
     volume: 1
     pitch: 1
-    loop: 1
-    type: 1
+    loop: 0
+    type: 0
+    source: {fileID: 0}
+  - name: Door
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    type: 0
+    source: {fileID: 0}
+  - name: Switch
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    type: 0
+    source: {fileID: 0}
+  - name: Plate
+    clip: {fileID: 0}
+    volume: 1
+    pitch: 1
+    loop: 0
+    type: 0
     source: {fileID: 0}

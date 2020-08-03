@@ -24,12 +24,10 @@ public class AudioManager : MonoBehaviour
 
         foreach (Sound s in sounds)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
+            if (s.source == null)
+            {
+                AddSource(s);
+            }
         }
     }
 
@@ -50,7 +48,14 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound \"" + name + "\" not found!");
             return;
         }
-        s.source.Play();
+        if (s.source != null)
+            s.source.Play();
+        else
+        {
+            AddSource(s);
+
+            s.source.Play();
+        }
     }
 
     /// <summary>
@@ -65,14 +70,31 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound \"" + name + "\" not found!");
             return;
         }
-        s.source.Stop();
+        if (s.source != null)
+            s.source.Stop();
+        else
+        {
+            AddSource(s);
+
+            s.source.Stop();
+        }
     }
 
     public void StopAll()
     {
         foreach (Sound sound in sounds)
         {
-            sound.source.Stop();
+            Stop(sound.name);
         }
+    }
+
+    void AddSource(Sound s)
+    {
+        s.source = gameObject.AddComponent<AudioSource>();
+        s.source.clip = s.clip;
+
+        s.source.volume = s.volume;
+        s.source.pitch = s.pitch;
+        s.source.loop = s.loop;
     }
 }
