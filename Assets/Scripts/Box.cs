@@ -30,13 +30,23 @@ public class Box : MonoBehaviour
                 isHeld = !isHeld;
             }
         }
+        if (!isHeld)
+        {
+            rb.isKinematic = true;
+            GetComponent<PointEffector2D>().enabled = false;
+        }
+        else
+        {
+            rb.isKinematic = false;
+            GetComponent<PointEffector2D>().enabled = true;
+        }
     }
 
     private void LateUpdate()
     {
         if (isHeld)
         {
-            float offset = 1.2f;
+            float offset = 1.5f;
 
             string state = CheckDirection(holder.lookDirection);
             lastState = state == "" ? lastState : state;
