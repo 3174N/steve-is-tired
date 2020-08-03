@@ -17,21 +17,12 @@ public class Plate : Trigger
         Box enterBox = collision.GetComponent<Box>();
         if (enterBox != null)
         {
-            box = enterBox;
-            isTouchingBox = true;
+            state = TriggerState.On;
         }
     }
 
     public void Update()
     {
-        if (box == null) 
-            return;
-
-        if (isTouchingBox) 
-            state = TriggerState.On;
-        else 
-            state = TriggerState.Off;
-
         // texture
         if (state == TriggerState.On)
         {
@@ -47,8 +38,6 @@ public class Plate : Trigger
     {
         Box exitBox = collision.GetComponent<Box>();
         if (exitBox != null)
-            isTouchingBox = false;
-        if (exitBox == box) 
-            box = null;
+            state = TriggerState.Off;
     }
 }
