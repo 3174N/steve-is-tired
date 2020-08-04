@@ -198,9 +198,6 @@ MonoBehaviour:
   canvas: {fileID: 1231291567}
   text: {fileID: 1553552222}
   texts:
-  - text: 
-    color: {r: 1, g: 1, b: 1, a: 1}
-    duration: 2
   - text: This is Steve from accounting.
     color: {r: 1, g: 1, b: 1, a: 1}
     duration: 2
@@ -286,6 +283,14 @@ PrefabInstance:
     - target: {fileID: 970666039399771473, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 970666039399771474, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
+      propertyPath: lockOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 970666039399771474, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
+      propertyPath: maxLockTime
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
@@ -885,7 +890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 12b7d8341b6f9e14394fd07ee41c4cf7, type: 2}
   m_sharedMaterial: {fileID: 7802716117113600377, guid: 12b7d8341b6f9e14394fd07ee41c4cf7, type: 2}

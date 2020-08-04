@@ -7,6 +7,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     #region variables
+    public bool lockOnStart;
+    public float maxLockTime;
+    float lockTime;
+
     public float speed = 3f;
 
     public KeyCode rewindKey = KeyCode.R;
@@ -28,6 +32,8 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public Vector2 lookDirection = new Vector2(1, 0);
 
+    bool canMove;
+
     Rigidbody2D rb;
     Animator animator;
     #endregion
@@ -47,6 +53,12 @@ public class PlayerController : MonoBehaviour
             rewindBar.SetMaxRewind(maxRewindTime);
             rewindBar.SetRewind(rewindTime);
         }
+
+        if (lockOnStart)
+        {
+            lockTime = maxLockTime;
+            canMove = false;
+        }
     }
 
     // Update is called once per frame
@@ -56,7 +68,10 @@ public class PlayerController : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        movement.Set(horizontal, vertical);
+        if (canMove)
+        { 
+            movement.Set(horizontal, vertical);
+        }
 
         if (!Mathf.Approximately(movement.x, 0.0f) || !Mathf.Approximately(movement.y, 0.0f))
         {
@@ -80,6 +95,13 @@ public class PlayerController : MonoBehaviour
         }
         else
             if (rewindBar != null ) rewindBar.gameObject.SetActive(false);
+
+        // Lock
+        lockTime -= Time.deltaTime;
+        if (lockTime <= 0)
+        {
+            canMove = true;
+        }
     }
 
     void FixedUpdate()
