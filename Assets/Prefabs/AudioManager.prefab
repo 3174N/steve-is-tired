@@ -45,14 +45,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Theme
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: aac66bea89cf9504c8f6e76080e84622, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     type: 1
     source: {fileID: 0}
   - name: Energy Drink
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: d04847e04294ba249af82db4c2352025, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -79,8 +79,15 @@ MonoBehaviour:
     loop: 0
     type: 0
     source: {fileID: 0}
-  - name: Box
+  - name: Box_Thud
     clip: {fileID: 8300000, guid: 8efc1ba152308014c975acb7c422c84f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    type: 0
+    source: {fileID: 0}
+  - name: Box_Pickup
+    clip: {fileID: 8300000, guid: 4f340eaaab00faf42be4fa45946ddbad, type: 3}
     volume: 1
     pitch: 1
     loop: 0
