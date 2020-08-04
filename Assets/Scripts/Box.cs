@@ -31,6 +31,7 @@ public class Box : MonoBehaviour
             if (Input.GetKeyDown(holder.interactKey))
             {
                 isHeld = true;
+                //FindObjectOfType<AudioManager>().Play("Box_Pickup");
                 transform.parent = holder.transform;
             }
             if (Input.GetKey(holder.interactKey))
