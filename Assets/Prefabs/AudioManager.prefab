@@ -80,7 +80,7 @@ MonoBehaviour:
     type: 0
     source: {fileID: 0}
   - name: Box
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 8efc1ba152308014c975acb7c422c84f, type: 3}
     volume: 1
     pitch: 1
     loop: 0
