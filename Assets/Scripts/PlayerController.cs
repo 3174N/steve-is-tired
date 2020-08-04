@@ -42,8 +42,11 @@ public class PlayerController : MonoBehaviour
         pointsInTime = new List<PointInTime>();
 
         rewindTime = maxRewindTime;
-        rewindBar.SetMaxRewind(maxRewindTime);
-        rewindBar.SetRewind(rewindTime);
+        if (rewindBar != null)
+        {
+            rewindBar.SetMaxRewind(maxRewindTime);
+            rewindBar.SetRewind(rewindTime);
+        }
     }
 
     // Update is called once per frame
@@ -71,12 +74,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(rewindKey))
             StopRewind();
 
-        if (!infiniteRewind)
+        if (!infiniteRewind && rewindBar != null)
         {
             rewindBar.SetRewind(rewindTime);
         }
         else
-            rewindBar.gameObject.SetActive(false);
+            if (rewindBar != null ) rewindBar.gameObject.SetActive(false);
     }
 
     void FixedUpdate()
