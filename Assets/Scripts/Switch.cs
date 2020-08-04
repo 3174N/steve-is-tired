@@ -15,12 +15,17 @@ public class Switch : Trigger
     bool playerIsIn;
 
     PlayerController player;
+
+    public Sprite sprOn, sprOff;
+    SpriteRenderer sprRend;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
         player = FindObjectOfType<PlayerController>();
+
+        sprRend = GetComponent<SpriteRenderer>();
 
         timeLimit = maxTimeLimit;
     }
@@ -49,6 +54,8 @@ public class Switch : Trigger
                 timeLimit = maxTimeLimit;
             }
         }
+        if (state == TriggerState.On) sprRend.sprite = sprOn;
+        else sprRend.sprite = sprOff;
     }
 
     public void StateSwitch()
