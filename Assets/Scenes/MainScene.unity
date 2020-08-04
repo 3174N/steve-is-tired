@@ -3526,6 +3526,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 778133295}
     m_Modifications:
+    - target: {fileID: 2022757673304846469, guid: 4beb89a0eae69854f8884e6fbbe53bfa, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000015258789
+      objectReference: {fileID: 0}
     - target: {fileID: 6646005517311944042, guid: 4beb89a0eae69854f8884e6fbbe53bfa, type: 3}
       propertyPath: m_Name
       value: Rewind Bar
