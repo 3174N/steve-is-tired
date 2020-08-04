@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c72997ed5e5546a4fb79218ffb4989dd
+guid: 49c1be2a7e83c7b47902c3ac7de59e19
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,11 +11,11 @@ TrueTypeFontImporter:
   fontNames:
   - Munro Small
   fallbackFontReferences: []
-  customCharacters: 
+  customCharacters:
   fontRenderingMode: 0
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:

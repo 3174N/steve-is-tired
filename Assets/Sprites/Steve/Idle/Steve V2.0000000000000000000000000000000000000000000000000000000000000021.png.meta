@@ -4,28 +4,13 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 6349786958429763325
-    second: Steve V2.1
+    second: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_0
   - first:
       213: 407090889001500078
-    second: Steve V2.2
+    second: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_1
   - first:
       213: -8147116300924140864
-    second: Steve V2.3
-  - first:
-      213: -7329668233160079020
-    second: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_3
-  - first:
-      213: 3551089273434864959
-    second: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_4
-  - first:
-      213: 2962630011542470267
-    second: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_5
-  - first:
-      213: -5904939442932003998
-    second: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_6
-  - first:
-      213: 1293412821081290155
-    second: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_7
+    second: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -68,9 +53,9 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0, y: 0}
-  spritePixelsToUnits: 100
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,6 +95,42 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -137,15 +158,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Steve V2.1
+      name: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 180
-        width: 48
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3
+        y: 184
+        width: 42
+        height: 84
+      alignment: 9
+      pivot: {x: 0.48545274, y: 0.27087584}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,19 +175,19 @@ TextureImporter:
       spriteID: df63d989899fe1850800000000000000
       internalID: 6349786958429763325
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Steve V2.2
+      name: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 90
-        width: 48
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3
+        y: 94
+        width: 42
+        height: 84
+      alignment: 9
+      pivot: {x: 0.49272656, y: 0.22723316}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,19 +196,19 @@ TextureImporter:
       spriteID: ead7b36b10746a500800000000000000
       internalID: 407090889001500078
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Steve V2.3
+      name: Steve V2.0000000000000000000000000000000000000000000000000000000000000021_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 48
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4
+        y: 2
+        width: 38
+        height: 87
+      alignment: 9
+      pivot: {x: 0.5000005, y: 0.26824215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,7 +217,7 @@ TextureImporter:
       spriteID: 0c24f9bb3e0afee80800000000000000
       internalID: -8147116300924140864
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     outline: []
@@ -205,13 +226,13 @@ TextureImporter:
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
-    indices: 
+    indices:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+  spritePackingTag:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:
