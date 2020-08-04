@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 970666039399771476}
   - component: {fileID: 970666039399771475}
   - component: {fileID: 970666039399771474}
-  - component: {fileID: 6741163776303621441}
+  - component: {fileID: 2138231277}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -75,12 +75,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5207544987158716770, guid: ea5898a1a7305b644a914f5786810350, type: 3}
+  m_Sprite: {fileID: 6349786958429763325, guid: ffc28478b4ccdd545bfb6f4928ab855a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.14, y: 0.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102,9 +102,9 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -0.030310752}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.4770884, y: 0.24293406}
-    oldSize: {x: 0.13333334, y: 0.27333334}
-    newSize: {x: 0.2, y: 0.2}
+    pivot: {x: 0.48545274, y: 0.27087584}
+    oldSize: {x: 0.14, y: 0.28}
+    newSize: {x: 0.14, y: 0.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   interactKey: 101
   switchInteractingWith: {fileID: 0}
   lookDirection: {x: 1, y: 0}
---- !u!95 &6741163776303621441
+--- !u!95 &2138231277
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
