@@ -23,30 +23,50 @@ public class Box : MonoBehaviour
 
     void Update()
     {
+        Vector2 direction = -(holder.GetComponent<Rigidbody2D>().position - rb.position);
+        direction.x = Mathf.Round(direction.x);
+        direction.y = Mathf.Round(direction.y);
         if (playerIsIn)
-        {   
+        {
             if (Input.GetKeyDown(holder.interactKey))
             {
                 isHeld = true;
                 transform.parent = holder.transform;
-                if (holder.lookDirection == holder.GetComponent<Rigidbody2D>().position - rb.position)
+            }
+            if (Input.GetKey(holder.interactKey))
+            {
+                if (holder.lookDirection == direction)
                 {
-                    Debug.Log("Push");
+                    if (direction.x > 0)
+                    {
+                        direction.Set(0.01f, 0);
+                    }
+                    if (direction.x < 0)
+                    {
+                        direction.Set(-0.01f, 0);
+                    }
+                    if (direction.y > 0)
+                    {
+                        direction.Set(0, 0.01f);
+                    }
+                    if (direction.y < 0)
+                    {
+                        direction.Set(0, -0.01f);
+                    }
+                    rb.position += direction;
                 }
-                //rb.isKinematic = false;
             }
             if (Input.GetKeyUp(holder.interactKey))
             {
                 isHeld = false;
                 transform.parent = null;
-                //rb.isKinematic = true;
             }
         }
-    }
 
-    private void LateUpdate()
-    {
-        
+        if (direction.magnitude > 1.2)
+        {
+            transform.parent = null;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,6 +75,11 @@ public class Box : MonoBehaviour
         if (player != null)
         {
             playerIsIn = true;
+        }
+        else if (!collision.isTrigger)
+        {
+            rb.isKinematic = false;
+            rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
         }
     }
 
@@ -65,16 +90,6 @@ public class Box : MonoBehaviour
             transform.parent = null;
             playerIsIn = false;
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        rb.isKinematic = false;
-        rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
         rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }

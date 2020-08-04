@@ -29,12 +29,14 @@ public class PlayerController : MonoBehaviour
     public Vector2 lookDirection = new Vector2(1, 0);
 
     Rigidbody2D rb;
+    Animator animator;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         rewindBar = FindObjectOfType<RewindBar>();
 
         pointsInTime = new List<PointInTime>();
@@ -58,6 +60,10 @@ public class PlayerController : MonoBehaviour
             lookDirection.Set(movement.x, movement.y);
             lookDirection.Normalize();
         }
+
+        animator.SetFloat("Look X", lookDirection.x);
+        animator.SetFloat("Look Y", lookDirection.y);
+        animator.SetFloat("Speed", movement.magnitude);
 
         // Rewind
         if (Input.GetKeyDown(rewindKey))
@@ -100,7 +106,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        pointsInTime.Insert(0, new PointInTime(rb.position, switchInteractingWith));
+        pointsInTime.Insert(0, new PointInTime(rb.position, lookDirection, switchInteractingWith));
         switchInteractingWith = null;
     }
 
@@ -109,6 +115,7 @@ public class PlayerController : MonoBehaviour
         if (pointsInTime.Count > 0)
         {
             rb.MovePosition(pointsInTime[0].position);
+            lookDirection = pointsInTime[0].lookDirection;
             if (pointsInTime[0].switchSwitched != null)
                 pointsInTime[0].switchSwitched.StateSwitch();
             pointsInTime.RemoveAt(0);
