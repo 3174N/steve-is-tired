@@ -32,3 +32,25 @@ public class AudioEditor : Editor
         }
     }
 }
+
+[CustomEditor(typeof(AudioSource))]
+public class SourceEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+
+        AudioSource source = (AudioSource)target;
+
+        GUILayout.BeginHorizontal();
+        if (GUILayout.Button("Play"))
+        {
+            source.Play();
+        }
+        if (GUILayout.Button("Stop"))
+        {
+            source.Stop();
+        }
+        GUILayout.EndHorizontal();
+    }
+} 
