@@ -26,6 +26,15 @@ TextureImporter:
   - first:
       213: -7925992034848179345
     second: TileSetCurtain
+  - first:
+      213: 5630942896199428741
+    second: TileSetFloor
+  - first:
+      213: 1851284976594248522
+    second: TileSetWall
+  - first:
+      213: -8871038989383191861
+    second: TileSetWallLeft
   externalObjects: {}
   serializedVersion: 11
   mipmaps:

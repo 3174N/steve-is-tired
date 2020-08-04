@@ -175,7 +175,7 @@ TextureImporter:
       spriteID: df63d989899fe1850800000000000000
       internalID: 6349786958429763325
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
@@ -196,7 +196,7 @@ TextureImporter:
       spriteID: ead7b36b10746a500800000000000000
       internalID: 407090889001500078
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
@@ -217,7 +217,7 @@ TextureImporter:
       spriteID: 0c24f9bb3e0afee80800000000000000
       internalID: -8147116300924140864
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     outline: []
@@ -226,13 +226,13 @@ TextureImporter:
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
-    indices: 
+    indices:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+  spritePackingTag:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:

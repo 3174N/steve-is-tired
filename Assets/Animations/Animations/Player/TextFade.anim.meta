@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Animations/Animations/Player/TextFade.anim.meta
 guid: 30d36b65b52e6f543a243cb008b2e91f
 NativeFormatImporter:
+=======
+guid: d7b13d9a5a0cd554192f169e2e7fbd62
+folderAsset: yes
+DefaultImporter:
+>>>>>>> 8efbd29c1db82d488e1b254792ee27f4f2fef625:Assets/Fonts/Munro.meta
   externalObjects: {}
   mainObjectFileID: 0
   userData: 
