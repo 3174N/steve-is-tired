@@ -10,9 +10,6 @@ public class LevelLoader : MonoBehaviour
     #region variables
     public float transitionTime = 1;
 
-    public Slider slider;
-    public TextMeshProUGUI progressText;
-
     Animator transition;
     #endregion
 
@@ -58,15 +55,6 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
-
-        while (!operation.isDone)
-        {
-            float progress = Mathf.Clamp01(operation.progress / 0.9f);
-            slider.value = progress;
-            progressText.text = progress * 100 + "%";
-
-            yield return null;
-        }
     }
 
     IEnumerator LoadLevel(string levelIndex)
@@ -76,14 +64,5 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
-
-        while (!operation.isDone)
-        {
-            float progress = Mathf.Clamp01(operation.progress / 0.9f);
-            slider.value = progress;
-            progressText.text = progress * 100 + "%";
-
-            yield return null;
-        }
     }
 }
