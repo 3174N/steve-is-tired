@@ -22,6 +22,7 @@ public class EnergyDrink : MonoBehaviour
         if (player != null && player.maxRewindTime > player.rewindTime && !player.infiniteRewind)
         {
             player.ResetRewindTime();
+            FindObjectOfType<AudioManager>().Play("Energy Drink");
             Destroy(gameObject);
         }
     }
