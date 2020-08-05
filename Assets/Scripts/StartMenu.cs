@@ -6,7 +6,8 @@ public class StartMenu : MonoBehaviour
 {
     public void Launch()
     {
-        FindObjectOfType<LevelLoader>().LoadStart();
+        FindObjectOfType<GameManager>().Load();
+        FindObjectOfType<LevelLoader>().Load(FindObjectOfType<GameManager>().level);
     }
 
     public void Quit()

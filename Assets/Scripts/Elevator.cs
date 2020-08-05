@@ -9,6 +9,7 @@ public class Elevator : MonoBehaviour
         PlayerController player = collision.GetComponent<PlayerController>();
         if (player != null)
         {
+            FindObjectOfType<GameManager>().level++;
             FindObjectOfType<LevelLoader>().LoadNextLevel();
         }
     }
