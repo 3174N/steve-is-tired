@@ -19,7 +19,7 @@ With that in mind, if you want to install the game locally, you will find releas
 
 Hello. We're the Fourth Men. 
 * [3174N](https://github.com/3174N): progamming, ideas, website and soundtrack
-* [SFR](https://github.com/SFR-git): ideas, level design, playtesting, website, SFXs and GitHub repo management
+* [SFR](https://github.com/SFR-git): ideas, level design, playtesting, website, SFX and GitHub repo management
 * [g33king](https://github.com/g33king): art, level design, ideas and programming
 * [TE](https://github.com/TEmadethemistakeofbeingongithub): art and bothering to use GitHub
 
