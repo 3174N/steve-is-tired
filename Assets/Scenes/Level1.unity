@@ -396,6 +396,10 @@ PrefabInstance:
       propertyPath: maxLockTime
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 970666039399771474, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
+      propertyPath: canRewind
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
 --- !u!1001 &436116548

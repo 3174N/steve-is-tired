@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 3f;
 
+    public bool canRewind;
     public KeyCode rewindKey = KeyCode.R;
     public bool infiniteRewind = false;
     public float maxRewindTime = 5f;
@@ -84,10 +85,13 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", movement.magnitude);
 
         // Rewind
-        if (Input.GetKeyDown(rewindKey))
-            StartRewind(true);
-        if (Input.GetKeyUp(rewindKey))
-            StopRewind();
+        if (canRewind)
+        {
+            if (Input.GetKeyDown(rewindKey))
+                StartRewind(true);
+            if (Input.GetKeyUp(rewindKey))
+                StopRewind();
+        }
 
         if (!infiniteRewind && rewindBar != null)
         {
@@ -108,10 +112,13 @@ public class PlayerController : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
 
-        if (isRewinding)
-            Rewind();
-        else
-            Record();
+        if (canRewind) 
+        { 
+            if (isRewinding)
+                Rewind();
+            else
+                Record();
+        }
     }
 
     #region rewind

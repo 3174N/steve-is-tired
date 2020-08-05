@@ -148,6 +148,7 @@ MonoBehaviour:
   lockOnStart: 0
   maxLockTime: 0
   speed: 3
+  canRewind: 1
   rewindKey: 114
   infiniteRewind: 0
   maxRewindTime: 5
