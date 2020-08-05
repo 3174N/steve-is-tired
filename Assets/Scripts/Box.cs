@@ -30,7 +30,6 @@ public class Box : MonoBehaviour
         {
             if (Input.GetKeyDown(holder.interactKey))
             {
-<<<<<<< HEAD
                 isHeld = true;
                 //FindObjectOfType<AudioManager>().Play("Box_Pickup");
                 transform.parent = holder.transform;
@@ -68,9 +67,7 @@ public class Box : MonoBehaviour
         if (direction.magnitude > 1.2)
         {
             transform.parent = null;
-=======
                 isHeld = !isHeld;
-            }
         }
         if (!isHeld)
         {
@@ -100,7 +97,6 @@ public class Box : MonoBehaviour
                 rb.MovePosition(new Vector2(holder.transform.position.x, holder.transform.position.y + offset));
             else if (lastState == "DOWN")
                 rb.MovePosition(new Vector2(holder.transform.position.x, holder.transform.position.y - offset));
->>>>>>> parent of 6e3f8ea... Add push / pull
         }
     }
 
@@ -124,10 +120,9 @@ public class Box : MonoBehaviour
         {
             playerIsIn = false;
         }
-<<<<<<< HEAD
         rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-=======
+
     }
 
     private string CheckDirection(Vector2 dir)
@@ -142,6 +137,5 @@ public class Box : MonoBehaviour
             return "DOWN";
 
         else return "";
->>>>>>> parent of 6e3f8ea... Add push / pull
     }
 }
