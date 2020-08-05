@@ -97,4 +97,19 @@ public class AudioManager : MonoBehaviour
         s.source.pitch = s.pitch;
         s.source.loop = s.loop;
     }
+
+    void UpdateSources()
+    {
+        foreach (Sound s in sounds)
+        {
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+        }
+    }
+
+    private void OnValidate()
+    {
+        UpdateSources();
+    }
 }
