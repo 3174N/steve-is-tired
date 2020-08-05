@@ -5,9 +5,9 @@ using System.Runtime.InteropServices;
 
 public class AudioManager : MonoBehaviour
 {
-    public Sound[] sounds;
-
     public static AudioManager instance;
+
+    public Sound[] sounds;
 
     // Start is called before the first frame update
     void Awake()
