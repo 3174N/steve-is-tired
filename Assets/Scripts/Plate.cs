@@ -18,13 +18,15 @@ public class Plate : Trigger
         if (enterBox != null)
         {
             state = TriggerState.On;
+            isTouchingBox = true;
+            box = enterBox;
         }
     }
 
     public void Update()
     {
         if (box == null) return;
-        if (isTouchingBox && !box.isHeld) state = TriggerState.On;
+        if (isTouchingBox && box.isHeld == false) state = TriggerState.On;
         else state = TriggerState.Off;
 
         // texture

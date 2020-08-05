@@ -30,44 +30,9 @@ public class Box : MonoBehaviour
         {
             if (Input.GetKeyDown(holder.interactKey))
             {
-                isHeld = true;
-                //FindObjectOfType<AudioManager>().Play("Box_Pickup");
-                transform.parent = holder.transform;
-            }
-            if (Input.GetKey(holder.interactKey))
-            {
-                if (holder.lookDirection == direction)
-                {
-                    if (direction.x > 0)
-                    {
-                        direction.Set(0.01f, 0);
-                    }
-                    if (direction.x < 0)
-                    {
-                        direction.Set(-0.01f, 0);
-                    }
-                    if (direction.y > 0)
-                    {
-                        direction.Set(0, 0.01f);
-                    }
-                    if (direction.y < 0)
-                    {
-                        direction.Set(0, -0.01f);
-                    }
-                    rb.position += direction;
-                }
-            }
-            if (Input.GetKeyUp(holder.interactKey))
-            {
-                isHeld = false;
-                transform.parent = null;
-            }
-        }
-
-        if (direction.magnitude > 1.2)
-        {
-            transform.parent = null;
                 isHeld = !isHeld;
+                //FindObjectOfType<AudioManager>().Play("Box_Pickup");
+            }
         }
         if (!isHeld)
         {
