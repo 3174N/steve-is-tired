@@ -54,8 +54,10 @@ public class Switch : Trigger
                 timeLimit = maxTimeLimit;
             }
         }
-        if (state == TriggerState.On) sprRend.sprite = sprOn;
-        else sprRend.sprite = sprOff;
+        if (state == TriggerState.On) 
+            sprRend.sprite = sprOn;
+        else 
+            sprRend.sprite = sprOff;
     }
 
     public void StateSwitch()

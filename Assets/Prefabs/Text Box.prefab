@@ -339,19 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 939440546422830383}
   text: {fileID: 939440546216993502}
-  texts:
-  - text: This is Steve from accounting.
-    color: {r: 1, g: 1, b: 1, a: 1}
-    duration: 2
-  - text: Steve is very tired.
-    color: {r: 1, g: 1, b: 1, a: 1}
-    duration: 2
-  - text: Infact, Steve is so tired that he can't move on his own.
-    color: {r: 1, g: 1, b: 1, a: 1}
-    duration: 2
-  - text: WASD to move
-    color: {r: 0.8773585, g: 0.57938766, b: 0.57938766, a: 1}
-    duration: 8
+  texts: []
 --- !u!95 &939440547509490402
 Animator:
   serializedVersion: 3

@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+        source = GetComponent<AudioSource>();
 
         circleCollider = gameObject.AddComponent<CircleCollider2D>();
         circleCollider.radius = range / transform.localScale.x;
