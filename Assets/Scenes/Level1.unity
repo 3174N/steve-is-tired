@@ -527,10 +527,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2816412970544556735, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4823575826735918200, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -578,18 +574,6 @@ PrefabInstance:
     - target: {fileID: 4823575826735918201, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_Name
       value: LevelTemplate
-      objectReference: {fileID: 0}
-    - target: {fileID: 5731031972029339153, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
-      propertyPath: lockOnStart
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5731031972029339153, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
-      propertyPath: maxLockTime
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5731031972029339153, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
-      propertyPath: canRewind
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
