@@ -11,7 +11,7 @@ This game consists of **$NUMBER** levels, and saves in the loading zone between 
 
 ## Play the game
 This game was made with WebGL in mind, in order to submit it on itch.io. You can play it [here](https://sfr.moe/play).
-With that in mind, if you want to install the game locally, you will find releases on the [releases page](https://github.com/SFR-git/4thmen-bj4/releases).
+With that in mind, if you want to install the game locally, you will find releases on the [releases page](https://github.com/SFR-git/steve-is-tired/releases).
 
 ## Credits
 ### Creators
