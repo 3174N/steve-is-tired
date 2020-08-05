@@ -209,7 +209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].text
-      value: A pressure plate and a switch? Really
+      value: Steve's boss must really hate him.
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].color.a
@@ -233,7 +233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[1].text
-      value: Did the boss did that on purpose?
+      value: There's no other reason for both a box and a switch.
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[1].color.r
@@ -8714,11 +8714,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].text
-      value: The door is locked again!
+      value: Unfortunately for Steve, the door is locked again.
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].color.a
@@ -8758,7 +8758,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[1].text
-      value: But the box is so heavy...
+      value: Steve noticed a box in the corner of the room.
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[1].duration
@@ -8766,19 +8766,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[2].text
-      value: Press E to pickup and drop boxes.
+      value: Maybe he could pick it up?
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[2].color.r
-      value: 0.8784314
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[2].color.g
-      value: 0.5803922
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[2].color.b
-      value: 0.5803922
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[2].color.a
@@ -8786,6 +8786,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[2].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[3].text
+      value: Press E to pickup and drop boxes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[3].color.r
+      value: 0.8784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[3].color.g
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[3].color.b
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[3].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[3].duration
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []

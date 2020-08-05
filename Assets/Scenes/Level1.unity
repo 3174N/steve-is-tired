@@ -193,11 +193,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].text
-      value: Steve is too tired to open the door.
+      value: Steve is so tired, he can't even open the door by himself.
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[1].text
-      value: Help Steve to flip the switch.
+      value: Please, help him flip the switch.
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[2].text
@@ -326,11 +326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].text
-      value: Oh, the door is open.
+      value: Luckily for Steve, the door was open.
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].color.r
@@ -350,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[1].text
-      value: Thank goodness
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[1].color.r
@@ -370,7 +370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].duration
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[1].duration
@@ -7486,11 +7486,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].text
-      value: Finally, the elevator!
+      value: Steve saw an elevator.
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[1].text
-      value: Steve can use that to go to the next floor!
+      value: He decided he'd had enough work for today, and entered it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[1].duration
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
@@ -7555,7 +7563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].text
-      value: This is steve from accounting.
+      value: This is Steve from accounting.
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].color.a
@@ -7647,7 +7655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[3].duration
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
