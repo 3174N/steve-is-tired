@@ -112,10 +112,11 @@ public class PlayerController : MonoBehaviour
             canMove = true;
         }
 
-        // box
+        // Box
         if (isHoldingBox && Input.GetKeyDown(interactKey))
         {
-            Instantiate(boxPrefab, transform.position - new Vector3(0, 2, 0), transform.rotation);
+            Vector2 direction = (lookDirection.y != -1) ? lookDirection : new Vector2(0, -2);
+            Instantiate(boxPrefab, rb.position + direction, Quaternion.identity);
             transform.Find("HoldingBox").gameObject.SetActive(false);
             isHoldingBox = false;
         }
