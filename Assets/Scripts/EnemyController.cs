@@ -18,6 +18,7 @@ public class EnemyController : MonoBehaviour
 
     CircleCollider2D circleCollider;
     Rigidbody2D rb;
+    AudioSource source;
     #endregion
 
     // Start is called before the first frame update
@@ -57,12 +58,14 @@ public class EnemyController : MonoBehaviour
     {
         circleCollider.enabled = true;
         isAttacking = true;
+        source.Play();
     }
 
     public void StopAttack()
     {
         circleCollider.enabled = false;
         isAttacking = false;
+        source.Stop();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
