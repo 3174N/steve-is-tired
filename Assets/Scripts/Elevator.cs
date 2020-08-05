@@ -10,6 +10,7 @@ public class Elevator : MonoBehaviour
         if (player != null)
         {
             FindObjectOfType<GameManager>().level++;
+            FindObjectOfType<GameManager>().Save();
             FindObjectOfType<LevelLoader>().LoadNextLevel();
         }
     }
