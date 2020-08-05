@@ -30,6 +30,7 @@ public class Box : MonoBehaviour
         {
             if (Input.GetKeyDown(holder.interactKey))
             {
+<<<<<<< HEAD
                 isHeld = true;
                 //FindObjectOfType<AudioManager>().Play("Box_Pickup");
                 transform.parent = holder.transform;
@@ -67,6 +68,39 @@ public class Box : MonoBehaviour
         if (direction.magnitude > 1.2)
         {
             transform.parent = null;
+=======
+                isHeld = !isHeld;
+            }
+        }
+        if (!isHeld)
+        {
+            rb.isKinematic = true;
+            GetComponent<PointEffector2D>().enabled = false;
+        }
+        else
+        {
+            rb.isKinematic = false;
+            GetComponent<PointEffector2D>().enabled = true;
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (isHeld)
+        {
+            float offset = 1.5f;
+
+            string state = CheckDirection(holder.lookDirection);
+            lastState = state == "" ? lastState : state;
+            if (lastState == "LEFT")
+                rb.MovePosition(new Vector2(holder.transform.position.x + offset, holder.transform.position.y));
+            else if (lastState == "RIGHT")
+                rb.MovePosition(new Vector2(holder.transform.position.x - offset, holder.transform.position.y));
+            else if (lastState == "UP")
+                rb.MovePosition(new Vector2(holder.transform.position.x, holder.transform.position.y + offset));
+            else if (lastState == "DOWN")
+                rb.MovePosition(new Vector2(holder.transform.position.x, holder.transform.position.y - offset));
+>>>>>>> parent of 6e3f8ea... Add push / pull
         }
     }
 
@@ -88,10 +122,26 @@ public class Box : MonoBehaviour
     {
         if (!isHeld)
         {
-            transform.parent = null;
             playerIsIn = false;
         }
+<<<<<<< HEAD
         rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+=======
+    }
+
+    private string CheckDirection(Vector2 dir)
+    {
+        if (dir == new Vector2(1, 0))
+            return "LEFT";
+        if (dir == new Vector2(-1, 0))
+            return "RIGHT";
+        if (dir == new Vector2(0, 1))
+            return "UP";
+        if (dir == new Vector2(0, -1))
+            return "DOWN";
+
+        else return "";
+>>>>>>> parent of 6e3f8ea... Add push / pull
     }
 }
