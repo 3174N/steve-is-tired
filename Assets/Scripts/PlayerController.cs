@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.MemoryProfiler;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -37,6 +38,10 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
+
+    bool isHoldingBox;
+    GameObject boxNearby;
+    public GameObject boxPrefab;
     #endregion
 
     // Start is called before the first frame update
@@ -106,6 +111,23 @@ public class PlayerController : MonoBehaviour
         {
             canMove = true;
         }
+
+        // box
+        if (isHoldingBox && Input.GetKeyDown(interactKey))
+        {
+            Instantiate(boxPrefab, transform.position - new Vector3(0, 2, 0), transform.rotation);
+            transform.Find("HoldingBox").gameObject.SetActive(false);
+            isHoldingBox = false;
+        }
+
+        else if (boxNearby != null && !isHoldingBox && Input.GetKeyDown(interactKey))
+        {
+            isHoldingBox = true;
+            Destroy(boxNearby);
+            boxNearby = null;
+            transform.Find("HoldingBox").gameObject.SetActive(true);
+        }
+        
     }
 
     void FixedUpdate()
@@ -120,6 +142,20 @@ public class PlayerController : MonoBehaviour
                 Record();
         }
     }
+
+    #region box
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "box")
+        {
+            boxNearby = collision.gameObject;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject == boxNearby) boxNearby = null;
+    }
+    #endregion
 
     #region rewind
     void Record()

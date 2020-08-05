@@ -37,7 +37,6 @@ public class Box : MonoBehaviour
                     FindObjectOfType<AudioManager>().Play("Box_Thud");
             }
         }
-<<<<<<< HEAD
         if (!isHeld)
         {
             rb.isKinematic = true;
@@ -48,13 +47,11 @@ public class Box : MonoBehaviour
             rb.isKinematic = false;
             GetComponent<PointEffector2D>().enabled = true;
         }
-=======
->>>>>>> parent of 784e409... Fix box
     }
 
     private void LateUpdate()
     {
-<<<<<<< HEAD
+
         if (isHeld)
         {
             float offset = 2f;
@@ -70,9 +67,7 @@ public class Box : MonoBehaviour
             else if (lastState == "DOWN")
                 rb.MovePosition(new Vector2(holder.transform.position.x, holder.transform.position.y - offset));
         }
-=======
-        
->>>>>>> parent of 784e409... Fix box
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -82,14 +77,12 @@ public class Box : MonoBehaviour
         {
             playerIsIn = true;
         }
-<<<<<<< HEAD
         else if (!collision.isTrigger)
         {
             rb.isKinematic = false;
             rb.constraints = RigidbodyConstraints2D.FreezePosition | RigidbodyConstraints2D.FreezeRotation;
         }
-=======
->>>>>>> parent of 784e409... Fix box
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
