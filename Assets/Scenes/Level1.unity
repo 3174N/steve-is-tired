@@ -579,6 +579,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTemplate
       objectReference: {fileID: 0}
+    - target: {fileID: 5731031972029339153, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
+      propertyPath: lockOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731031972029339153, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
+      propertyPath: maxLockTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731031972029339153, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
+      propertyPath: canRewind
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
 --- !u!4 &1897379390 stripped
@@ -7523,7 +7535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.21
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: m_LocalPosition.z
