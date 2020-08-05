@@ -31,7 +31,10 @@ public class Box : MonoBehaviour
             if (Input.GetKeyDown(holder.interactKey))
             {
                 isHeld = !isHeld;
-                //FindObjectOfType<AudioManager>().Play("Box_Pickup");
+                if (isHeld)
+                    FindObjectOfType<AudioManager>().Play("Box_Pickup");
+                else
+                    FindObjectOfType<AudioManager>().Play("Box_Thud");
             }
         }
         if (!isHeld)
