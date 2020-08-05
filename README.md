@@ -26,7 +26,7 @@ Hello. We're the Fourth Men.
 ### Assets
 * *Munro* font pack by [Ten by Twenty](https://www.tenbytwenty.com)
   * SIL Open Font licensed, pay-what-you-want font pack for commercial and non-commercial use!
-* color palette based on the *CC-29* Colour palette by Alpha6 on [Lospec](https://lospec.com/palette-list/cc-29)
+* Modified *CC-29* Colour palette by Alpha6 on [Lospec](https://lospec.com/palette-list/cc-29)
 
 ### Ideas
 9gag for inspiring maymays
