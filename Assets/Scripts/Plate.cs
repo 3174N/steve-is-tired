@@ -23,13 +23,10 @@ public class Plate : Trigger
 
     public void Update()
     {
-<<<<<<< HEAD
-=======
         if (box == null) return;
         if (isTouchingBox && !box.isHeld) state = TriggerState.On;
         else state = TriggerState.Off;
 
->>>>>>> parent of 6e3f8ea... Add push / pull
         // texture
         if (state == TriggerState.On)
         {
@@ -45,11 +42,8 @@ public class Plate : Trigger
     {
         Box exitBox = collision.GetComponent<Box>();
         if (exitBox != null)
-<<<<<<< HEAD
             state = TriggerState.Off;
-=======
             isTouchingBox = false;
         if (exitBox == box) box = null;
->>>>>>> parent of 6e3f8ea... Add push / pull
     }
 }
