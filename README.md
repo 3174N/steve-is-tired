@@ -18,8 +18,8 @@ With that in mind, if you want to install the game locally, you will find releas
 <img src="Logos/fourthmen-logo.jpeg" height="200" width="200"/>
 
 Hello. We're the Fourth Men. 
-* [3174N](https://github.com/3174N): progamming, ideas and website
-* [SFR](https://github.com/SFR-git): ideas, level design, playtesting, website and GitHub repo management
+* [3174N](https://github.com/3174N): progamming, ideas, website and soundtrack
+* [SFR](https://github.com/SFR-git): ideas, level design, playtesting, website, SFXs and GitHub repo management
 * [g33king](https://github.com/g33king): art, level design, ideas and programming
 * [TE](https://github.com/TEmadethemistakeofbeingongithub): art and bothering to use GitHub
 
@@ -37,5 +37,5 @@ Hello. We're the Fourth Men.
 ## License & Contributing
 This game is licensed under MIT, which means: **go nuts**.
 
-Feel free to fork, mod, copy and chanhttps://lospec.com/palette-list/cc-29ge all of our stuff (not licensed from a third party), as long as you give us credit and acknowhttps://lospec.com/palette-list/cc-29ledge the license.
+Feel free to fork, mod, copy and change all of our stuff (not licensed from a third party), as long as you give us credit and acknowedge the license.
 **PRs are welcome, too :D**
