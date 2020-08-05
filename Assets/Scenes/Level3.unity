@@ -15544,7 +15544,7 @@ GameObject:
   - component: {fileID: 733451258}
   - component: {fileID: 733451257}
   m_Layer: 0
-  m_Name: vending machine
+  m_Name: VendingMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
