@@ -575,6 +575,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTemplate
       objectReference: {fileID: 0}
+    - target: {fileID: 5731031972029339153, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
+      propertyPath: lockOnStart
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
 --- !u!4 &1897379390 stripped
@@ -7736,15 +7740,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6538067124848764144, guid: 5d5008f304dc22749b4572b3bf5caa5f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 56.2
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 6538067124848764144, guid: 5d5008f304dc22749b4572b3bf5caa5f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.44
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6538067124848764144, guid: 5d5008f304dc22749b4572b3bf5caa5f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -103.15512
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6538067124848764144, guid: 5d5008f304dc22749b4572b3bf5caa5f, type: 3}
       propertyPath: m_LocalRotation.x
