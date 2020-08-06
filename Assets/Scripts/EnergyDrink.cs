@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class EnergyDrink : MonoBehaviour
 {
+    #region Variables
+    public bool isActivatingTextBox;
+    public GameObject textBoxToActivate;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +29,15 @@ public class EnergyDrink : MonoBehaviour
             player.ResetRewindTime();
             FindObjectOfType<AudioManager>().Play("Energy Drink");
             Destroy(gameObject);
+        }
+    }
+
+    void ApplyTextBox()
+    {
+        if (isActivatingTextBox)
+        {
+            textBoxToActivate.transform.position = FindObjectOfType<PlayerController>().transform.position;
+            textBoxToActivate.SetActive(true);
         }
     }
 }

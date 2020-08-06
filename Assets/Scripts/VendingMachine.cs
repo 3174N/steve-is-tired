@@ -15,6 +15,8 @@ public class VendingMachine : MonoBehaviour
 
     public bool isActivatingTextBox;
     public GameObject textBoxToActivate;
+    public bool isActivatingTextOnCan;
+    public GameObject textBoxToActivateOnCan;
     #endregion
 
     private void Update()
@@ -23,10 +25,14 @@ public class VendingMachine : MonoBehaviour
         {
             if (Input.GetKeyDown(FindObjectOfType<PlayerController>().interactKey))
             {
-                Instantiate(energyDrink,
+                GameObject can = Instantiate(energyDrink,
                     new Vector3(FindObjectOfType<PlayerController>().transform.position.x, FindObjectOfType<PlayerController>().transform.position.y - 1, 0f),
                     Quaternion.identity);
+                can.GetComponent<EnergyDrink>().isActivatingTextBox = isActivatingTextOnCan;
+                can.GetComponent<EnergyDrink>().textBoxToActivate = textBoxToActivateOnCan;
+
                 FindObjectOfType<AudioManager>().Play("VendingMachine");
+
                 if (startRewind)
                     FindObjectOfType<PlayerController>().canRewind = true;
                 if (!hasPressed)
@@ -58,8 +64,6 @@ public class VendingMachine : MonoBehaviour
             playerIsIn = false;
         }
     }
-
-
 
     void ApplyTextBox()
     {
