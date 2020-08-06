@@ -17,7 +17,10 @@ public class Trigger : MonoBehaviour
 
     public void ApplyTextBox()
     {
-        textBoxToActivate.transform.position = FindObjectOfType<PlayerController>().transform.position;
-        textBoxToActivate.SetActive(true);
+        if (isActivatingTextBox)
+        {
+            textBoxToActivate.transform.position = FindObjectOfType<PlayerController>().transform.position;
+            textBoxToActivate.SetActive(true);
+        }
     }
 }
