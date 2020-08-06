@@ -7,14 +7,16 @@ public class EnemyController : MonoBehaviour
     #region variables
     [Tooltip("CircleCollider radius")]
     public float range;
-
     [Tooltip("Time between enemy attacks in seconds")]
     public float timeBetweenAttacks;
-    [Tooltip("Eenemy attack legth in seconds")]
+    [Tooltip("Enemy attack length in seconds")]
     public float attackLength;
     float attackTime;
+    [Tooltip("Length of rewind in seconds")]
+    public float attackRewind;
 
     bool isAttacking;
+    bool hasAttacked = false;
 
     CircleCollider2D circleCollider;
     Rigidbody2D rb;
@@ -58,28 +60,34 @@ public class EnemyController : MonoBehaviour
     {
         circleCollider.enabled = true;
         isAttacking = true;
-        source.Play();
     }
 
     public void StopAttack()
     {
         circleCollider.enabled = false;
         isAttacking = false;
-        source.Stop();
+        hasAttacked = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerController player = collision.GetComponent<PlayerController>();
-        if (player != null)
-            player.StartRewind(false);
+        if (player != null && !hasAttacked)  
+        {
+            hasAttacked = true;
+            StartCoroutine(RewindPlayer(player));
+        }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    IEnumerator RewindPlayer(PlayerController player)
     {
-        PlayerController player = collision.GetComponent<PlayerController>();
-        if (player != null)
-            player.StopRewind();
+        player.StartRewind(false);
+        source.Play();
+
+        yield return new WaitForSeconds(attackRewind);
+
+        player.StopRewind();
+        source.Stop();
     }
 
     private void OnDrawGizmos()
