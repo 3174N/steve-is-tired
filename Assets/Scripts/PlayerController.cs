@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public Vector2 lookDirection = new Vector2(1, 0);
 
-    bool canMove;
+    public bool canMove;
 
     Rigidbody2D rb;
     Animator animator;
