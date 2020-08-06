@@ -12,6 +12,9 @@ public class VendingMachine : MonoBehaviour
 
     bool hasPressed = false;
     bool playerIsIn;
+
+    public bool isActivatingTextBox;
+    public GameObject textBoxToActivate;
     #endregion
 
     private void Update()
@@ -26,6 +29,11 @@ public class VendingMachine : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("VendingMachine");
                 if (startRewind)
                     FindObjectOfType<PlayerController>().canRewind = true;
+                if (!hasPressed)
+                {
+                    ApplyTextBox();
+                    hasPressed = true;
+                }
             }
         }
     }
@@ -49,5 +57,13 @@ public class VendingMachine : MonoBehaviour
         {
             playerIsIn = false;
         }
+    }
+
+
+
+    void ApplyTextBox()
+    {
+        textBoxToActivate.transform.position = FindObjectOfType<PlayerController>().transform.position;
+        textBoxToActivate.SetActive(true);
     }
 }

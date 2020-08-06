@@ -18,6 +18,8 @@ public class Switch : Trigger
 
     public Sprite sprOn, sprOff;
     SpriteRenderer sprRend;
+
+    bool hasSwitched = false;
     #endregion
 
     // Start is called before the first frame update
@@ -40,6 +42,12 @@ public class Switch : Trigger
                 StateSwitch();
                 if (!timePersistent)
                     player.switchInteractingWith = this;
+
+                if (!hasSwitched)
+                {
+                    ApplyTextBox();
+                    hasSwitched = true;
+                }
             }
         }
 
