@@ -766,6 +766,95 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1d35cafeeba2444fa2c1b3b9142a934, type: 3}
+--- !u!1001 &2011874034
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 939440547509490398, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_Name
+      value: Text Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5.190938
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].color.r
+      value: 0.8784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].color.g
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].color.b
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].text
+      value: Taking a can from the vending machine will reset all cans in the level
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].duration
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
 --- !u!1 &2090946376
 GameObject:
   m_ObjectHideFlags: 0
