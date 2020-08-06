@@ -7,6 +7,9 @@ public class EnergyDrink : MonoBehaviour
     #region Variables
     public bool isActivatingTextBox;
     public GameObject textBoxToActivate;
+
+    float lifetime = 0f;
+    float Lifetime {get {return lifetime;}}
     #endregion
 
     // Start is called before the first frame update
@@ -18,7 +21,7 @@ public class EnergyDrink : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        lifetime += Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,6 +32,13 @@ public class EnergyDrink : MonoBehaviour
             player.ResetRewindTime();
             FindObjectOfType<AudioManager>().Play("Energy Drink");
             Destroy(gameObject);
+        }
+
+        EnergyDrink drink = collision.GetComponent<EnergyDrink>();
+        if (drink != null)
+        {
+            if (Lifetime > drink.Lifetime)
+                Destroy(drink.gameObject);
         }
     }
 

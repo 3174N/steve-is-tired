@@ -33,7 +33,7 @@ public class VendingMachine : MonoBehaviour
             if (Input.GetKeyDown(FindObjectOfType<PlayerController>().interactKey))
             {
                 GameObject can = Instantiate(energyDrink,
-                    new Vector3(FindObjectOfType<PlayerController>().transform.position.x, FindObjectOfType<PlayerController>().transform.position.y - 1, 0f),
+                    new Vector3(transform.position.x, transform.position.y - 3, 0f),
                     Quaternion.identity);
                 can.GetComponent<EnergyDrink>().isActivatingTextBox = isActivatingTextOnCan;
                 can.GetComponent<EnergyDrink>().textBoxToActivate = textBoxToActivateOnCan;
