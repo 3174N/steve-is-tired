@@ -24,7 +24,7 @@ public class EnergyDrink : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerController player = collision.GetComponent<PlayerController>();
-        if (player != null && (player.maxRewindTime > player.rewindTime || player.canDrink))
+        if (player != null && (player.maxRewindTime > player.RewindTime || player.canDrink))
         {
             player.ResetRewindTime();
             FindObjectOfType<AudioManager>().Play("Energy Drink");

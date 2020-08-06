@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
     public float maxRewindTime = 5f;
     public float rewindSpeedMultiplier = 2f;
     RewindBar rewindBar;
-    public float rewindTime;
+    float rewindTime;
+    public float RewindTime {get{return rewindTime;}}
     bool isRewinding;
     bool isUsingJuice;
     List<PointInTime> pointsInTime;
@@ -99,6 +100,8 @@ public class PlayerController : MonoBehaviour
                 StopRewind();
         }
 
+        rewindTime = Mathf.Clamp(rewindTime, 0.1f, maxRewindTime);
+
         if (!infiniteRewind && rewindBar != null)
         {
             rewindBar.SetRewind(rewindTime);
@@ -162,7 +165,7 @@ public class PlayerController : MonoBehaviour
     #region rewind
     void Record()
     {
-        if (rewindTime <= 0)
+        if (rewindTime <= 0.1)
             return;
 
         if (!infiniteRewind)
