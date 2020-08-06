@@ -119,10 +119,14 @@ public class PlayerController : MonoBehaviour
         // Box
         if (isHoldingBox && Input.GetKeyDown(interactKey))
         {
-            Vector2 direction = (lookDirection.y != -1) ? lookDirection : new Vector2(0, -2);
-            Instantiate(boxPrefab, rb.position + direction, Quaternion.identity);
-            transform.Find("HoldingBox").gameObject.SetActive(false);
-            isHoldingBox = false;
+            RaycastHit2D hit = Physics2D.Raycast(rb.position, lookDirection, 1.5f, LayerMask.GetMask("Environment"));
+            if (hit.collider == null)
+            {
+                Vector2 direction = (lookDirection.y != -1) ? lookDirection : new Vector2(0, -2);
+                Instantiate(boxPrefab, rb.position + direction, Quaternion.identity);
+                transform.Find("HoldingBox").gameObject.SetActive(false);
+                isHoldingBox = false;
+            }
         }
 
         else if (boxNearby != null && !isHoldingBox && Input.GetKeyDown(interactKey))
