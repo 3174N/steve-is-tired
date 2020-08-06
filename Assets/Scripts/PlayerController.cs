@@ -94,11 +94,17 @@ public class PlayerController : MonoBehaviour
         // Rewind
         if (canRewind)
         {
-            if (Input.GetKeyDown(rewindKey))
-                StartRewind(true);
-            if (Input.GetKeyUp(rewindKey))
-                StopRewind();
+            if (rewindTime > 0.1f)
+            {
+                if (Input.GetKeyDown(rewindKey))
+                    StartRewind(true);
+                if (Input.GetKeyUp(rewindKey))
+                    StopRewind();
+            }
         }
+
+        if (rewindTime <= 0.1f)
+            StopRewind();
 
         rewindTime = Mathf.Clamp(rewindTime, 0.1f, maxRewindTime);
 
@@ -127,6 +133,7 @@ public class PlayerController : MonoBehaviour
                 Vector2 direction = (lookDirection.y != -1) ? lookDirection : new Vector2(0, -2);
                 Instantiate(boxPrefab, rb.position + direction, Quaternion.identity);
                 transform.Find("HoldingBox").gameObject.SetActive(false);
+                FindObjectOfType<AudioManager>().Play("Box_Thud");
                 isHoldingBox = false;
             }
         }
@@ -137,6 +144,7 @@ public class PlayerController : MonoBehaviour
             Destroy(boxNearby);
             boxNearby = null;
             transform.Find("HoldingBox").gameObject.SetActive(true);
+            FindObjectOfType<AudioManager>().Play("Box_Pickup");
         }
         
     }
