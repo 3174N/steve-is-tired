@@ -5,6 +5,7 @@ using UnityEngine;
 public class VendingMachine : MonoBehaviour
 {
     #region variables
+    public bool startRewind;
     public bool infiniteDrinks;
 
     public GameObject energyDrink;
@@ -23,6 +24,8 @@ public class VendingMachine : MonoBehaviour
                     new Vector3(transform.position.x, transform.position.y - 3, 0f),
                     Quaternion.identity);
                 FindObjectOfType<AudioManager>().Play("VendingMachine");
+                if (startRewind)
+                    FindObjectOfType<PlayerController>().canRewind = true;
             }
         }
     }
