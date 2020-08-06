@@ -19,7 +19,7 @@ public class VendingMachine : MonoBehaviour
     public GameObject textBoxToActivateOnCan;
 
     public bool isSpawningCans;
-    public Vector2 spwanPoint;
+    public Vector2[] spawnPoints;
     #endregion
 
     private void Update()
@@ -34,8 +34,13 @@ public class VendingMachine : MonoBehaviour
                 can.GetComponent<EnergyDrink>().isActivatingTextBox = isActivatingTextOnCan;
                 can.GetComponent<EnergyDrink>().textBoxToActivate = textBoxToActivateOnCan;
 
-                if (isSpawningCans)
-                    Instantiate(energyDrink, (Vector3)spwanPoint, Quaternion.identity);
+                if (isSpawningCans) 
+                {
+                    for (int i = 0; i<spawnPoints.Length; i++)
+                    {
+                        Instantiate(energyDrink, (Vector3)spawnPoints[i], Quaternion.identity);
+                    }
+                }
 
                 FindObjectOfType<AudioManager>().Play("VendingMachine");
 
