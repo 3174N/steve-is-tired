@@ -11,4 +11,13 @@ public class Trigger : MonoBehaviour
     }
 
     public TriggerState state = TriggerState.Off;
+
+    public bool isActivatingTextBox;
+    public GameObject textBoxToActivate;
+
+    void ApplyTextBox()
+    {
+        textBoxToActivate.transform.position = FindObjectOfType<PlayerController>().transform.position;
+        textBoxToActivate.SetActive(true);
+    }
 }
