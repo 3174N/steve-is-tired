@@ -420,10 +420,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5526250914461351360, guid: a875635b817f47645bceef78aa3439d6, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6482703522426153264, guid: a875635b817f47645bceef78aa3439d6, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -636,10 +632,6 @@ PrefabInstance:
     - target: {fileID: 970666039399771474, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
       propertyPath: maxLockTime
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 970666039399771474, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
-      propertyPath: canRewind
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9341add565982b64c9dfbc854fc39cc0, type: 3}
