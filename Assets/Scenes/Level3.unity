@@ -262,13 +262,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.5925781
       objectReference: {fileID: 0}
+    - target: {fileID: 1027356474728801353, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027356474728801353, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027356475648954316, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2476293481475113269, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
-      value: -14
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 2476293481475113269, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
-      value: -14
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 2476293481475113269, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].y
@@ -276,7 +288,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2476293481475113269, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2476293481475113269, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
@@ -284,7 +296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2476293481475113269, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].x
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2476293481475113269, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[2].y
@@ -300,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2816412970544556735, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00000047683716
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2816412970545966160, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -360,10 +372,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5731031972029339153, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: canRewind
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5731031972029339153, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: infiniteRewind
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5731031972029339153, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
+      propertyPath: canDrink
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5731031972029339154, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
@@ -18851,6 +18867,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: startRewind
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 630960939435615252, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
       propertyPath: m_Name
       value: VendingMachine

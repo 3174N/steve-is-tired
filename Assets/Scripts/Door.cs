@@ -10,12 +10,14 @@ public class Door : MonoBehaviour
     bool shouldOpen = true;
 
     BoxCollider2D boxCollider;
+    Animator animator;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,15 +36,13 @@ public class Door : MonoBehaviour
             // Door is open
             boxCollider.isTrigger = true;
 
-            // Add aniamtion?
-            // Color change is temporary
-            GetComponent<SpriteRenderer>().color = Color.green;
+            animator.SetTrigger("Open");
         }
         else
         {
             boxCollider.isTrigger = false;
 
-            GetComponent<SpriteRenderer>().color = Color.red;
+            animator.SetTrigger("Close");
         }
     }
 }

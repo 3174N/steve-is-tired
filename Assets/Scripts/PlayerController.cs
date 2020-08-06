@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 3f;
 
+    public bool canDrink;
     public bool canRewind;
     public KeyCode rewindKey = KeyCode.R;
     public bool infiniteRewind = false;
