@@ -425,11 +425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2816412970544556735, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9999995
+      value: -0.99999976
       objectReference: {fileID: 0}
     - target: {fileID: 2816412970544556735, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.005296707
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2816412970545966160, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19024,6 +19024,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
   m_PrefabInstance: {fileID: 2139483337}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1278349610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1027356475648954316, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
+  m_PrefabInstance: {fileID: 646641944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1527104459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19468,6 +19473,10 @@ PrefabInstance:
       propertyPath: textBoxToActivate
       value: 
       objectReference: {fileID: 1092221535}
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: rewindBar
+      value: 
+      objectReference: {fileID: 1278349610}
     - target: {fileID: 630960939435615252, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
       propertyPath: m_Name
       value: VendingMachine

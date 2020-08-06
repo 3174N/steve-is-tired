@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class VendingMachine : MonoBehaviour
 {
@@ -20,6 +22,8 @@ public class VendingMachine : MonoBehaviour
 
     public bool isSpawningCans;
     public Vector2[] spawnPoints;
+
+    public GameObject rewindBar;
     #endregion
 
     private void Update()
@@ -45,7 +49,10 @@ public class VendingMachine : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("VendingMachine");
 
                 if (startRewind)
+                {
                     FindObjectOfType<PlayerController>().canRewind = true;
+                    rewindBar.SetActive(true);
+                }
                 if (!hasPressed)
                 {
                     ApplyTextBox();
