@@ -5,7 +5,7 @@ using UnityEngine;
 public class VendingMachine : MonoBehaviour
 {
     #region variables
-    public bool infinitDrinks;
+    public bool infiniteDrinks;
 
     public GameObject energyDrink;
 
@@ -22,6 +22,7 @@ public class VendingMachine : MonoBehaviour
                 Instantiate(energyDrink,
                     new Vector3(transform.position.x, transform.position.y - 3, 0f),
                     Quaternion.identity);
+                FindObjectOfType<AudioManager>().Play("VendingMachine");
             }
         }
     }
@@ -31,7 +32,7 @@ public class VendingMachine : MonoBehaviour
         PlayerController player = collision.GetComponent<PlayerController>();
         if (player != null)
         {
-            if (!hasPressed || infinitDrinks)
+            if (!hasPressed || infiniteDrinks)
             {
                 playerIsIn = true;
             }
