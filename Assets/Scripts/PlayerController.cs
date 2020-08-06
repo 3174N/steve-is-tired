@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public bool lockOnStart;
     public float maxLockTime;
     float lockTime;
+    bool hasLocked;
     
     public float speed = 3f;
 
@@ -36,7 +37,7 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public Vector2 lookDirection = new Vector2(1, 0);
 
-    bool canMove;
+    public bool canMove;
 
     Rigidbody2D rb;
     Animator animator;
@@ -110,9 +111,11 @@ public class PlayerController : MonoBehaviour
             if (rewindBar != null ) rewindBar.gameObject.SetActive(false);
 
         // Lock
+        
         lockTime -= Time.deltaTime;
-        if (lockTime <= 0)
+        if (lockTime <= 0 && !hasLocked)
         {
+            hasLocked = true;
             canMove = true;
         }
 
