@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public bool lockOnStart;
     public float maxLockTime;
     float lockTime;
+    bool hasLocked;
     
     public float speed = 3f;
 
@@ -110,9 +111,11 @@ public class PlayerController : MonoBehaviour
             if (rewindBar != null ) rewindBar.gameObject.SetActive(false);
 
         // Lock
+        
         lockTime -= Time.deltaTime;
-        if (lockTime <= 0)
+        if (lockTime <= 0 && !hasLocked)
         {
+            hasLocked = true;
             canMove = true;
         }
 
