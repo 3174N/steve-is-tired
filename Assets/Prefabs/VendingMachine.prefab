@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 630960939435615253}
   - component: {fileID: 630960939435615248}
   - component: {fileID: 630960939435615249}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: VendingMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,8 +123,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3687a6ec6b194c409ee882beaaff36d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  infinitDrinks: 1
+  startRewind: 0
+  infiniteDrinks: 0
   energyDrink: {fileID: 1564254009449374966, guid: d1d35cafeeba2444fa2c1b3b9142a934, type: 3}
+  isActivatingTextBox: 0
+  textBoxToActivate: {fileID: 0}
+  isActivatingTextOnCan: 0
+  textBoxToActivateOnCan: {fileID: 0}
 --- !u!61 &630960939435615249
 BoxCollider2D:
   m_ObjectHideFlags: 0
