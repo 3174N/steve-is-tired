@@ -412,14 +412,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5526250914073925189, guid: a875635b817f47645bceef78aa3439d6, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5526250914073925189, guid: a875635b817f47645bceef78aa3439d6, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6482703522426153264, guid: a875635b817f47645bceef78aa3439d6, type: 3}
       propertyPath: m_Name
       value: Canvas
