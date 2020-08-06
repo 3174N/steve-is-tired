@@ -429,7 +429,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2816412970544556735, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0026602745
+      value: 0.005296707
       objectReference: {fileID: 0}
     - target: {fileID: 2816412970545966160, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18889,7 +18889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.28
+      value: 5.27
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18937,7 +18937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].text
-      value: "That's Steve's favourite drink, W\u25C0\u25C0RP Energy Drink!"
+      value: That's Steve's favourite drink, W<<RP Energy Drink!
       objectReference: {fileID: 0}
     - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
       propertyPath: texts.Array.data[0].duration
@@ -19013,6 +19013,16 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
   m_PrefabInstance: {fileID: 16288117}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1092221535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 939440547509490398, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+  m_PrefabInstance: {fileID: 2139483337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1092221536 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+  m_PrefabInstance: {fileID: 2139483337}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1527104459
 PrefabInstance:
@@ -19267,6 +19277,132 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
   m_PrefabInstance: {fileID: 932154615}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2139483337
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2146665176}
+    m_Modifications:
+    - target: {fileID: 939440547509490398, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_Name
+      value: Text Box (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490398, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.7233763
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.8839493
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 8.197334
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490400, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.623131
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].text
+      value: Steve felt full of life again. He really did feel like time was warping
+        around him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].duration
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[1].text
+      value: Press R to rewind time
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[1].color.r
+      value: 0.8784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[1].color.g
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[1].color.b
+      value: 0.5803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[1].duration
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 939440547509490401, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
+      propertyPath: texts.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f50f09fb1742687b1b8f2aee2beed604, type: 3}
 --- !u!1 &2146665175
 GameObject:
   m_ObjectHideFlags: 0
@@ -19297,6 +19433,7 @@ Transform:
   - {fileID: 1031857325}
   - {fileID: 2066971376}
   - {fileID: 1640554622}
+  - {fileID: 1092221536}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19311,6 +19448,26 @@ PrefabInstance:
       propertyPath: startRewind
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: infiniteDrinks
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: isActivatingTextOnCan
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: textBoxToActivateOnCan
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: isActivatingTextBox
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: textBoxToActivate
+      value: 
+      objectReference: {fileID: 1092221535}
     - target: {fileID: 630960939435615252, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
       propertyPath: m_Name
       value: VendingMachine
