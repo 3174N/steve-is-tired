@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public bool lockOnStart;
     public float maxLockTime;
     float lockTime;
-
+    
     public float speed = 3f;
 
     public bool canDrink;
