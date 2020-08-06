@@ -24,7 +24,7 @@ public class VendingMachine : MonoBehaviour
             if (Input.GetKeyDown(FindObjectOfType<PlayerController>().interactKey))
             {
                 Instantiate(energyDrink,
-                    new Vector3(transform.position.x, transform.position.y - 3, 0f),
+                    new Vector3(FindObjectOfType<PlayerController>().transform.position.x, FindObjectOfType<PlayerController>().transform.position.y - 1, 0f),
                     Quaternion.identity);
                 FindObjectOfType<AudioManager>().Play("VendingMachine");
                 if (startRewind)
