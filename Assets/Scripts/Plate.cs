@@ -9,14 +9,6 @@ public class Plate : Trigger
     public Sprite sprNotPressed, sprPressed;
     #endregion
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "box")
-        {
-            state = TriggerState.On;
-        }
-    }
-
     public void Update()
     {
         // texture
@@ -30,9 +22,17 @@ public class Plate : Trigger
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "box" || collision.GetComponent<PlayerController>() || collision.GetComponent<EnemyController>())
+        {
+            state = TriggerState.On;
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "box")
+        if (collision.tag == "box" || collision.GetComponent<PlayerController>() || collision.GetComponent<EnemyController>())
         {
             state = TriggerState.Off;
         }
