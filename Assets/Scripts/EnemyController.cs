@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -35,6 +36,8 @@ public class EnemyController : MonoBehaviour
         circleCollider.enabled = false;
 
         attackTime = timeBetweenAttacks;
+
+        transform.Find("ForceField").transform.localScale = new Vector3(range / 1.6f, range / 1.6f, 1);
     }
 
     private void Update()
