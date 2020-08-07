@@ -321,6 +321,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: spawnPoints.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: isSpawningCans
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: spawnPoints.Array.data[0].x
+      value: 9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 630960939435615248, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
+      propertyPath: spawnPoints.Array.data[0].y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 630960939435615252, guid: 9f6a57d31b8d0e94dbd8b0bfb117887b, type: 3}
       propertyPath: m_Name
       value: VendingMachine
@@ -605,7 +621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2816412970544556735, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.370289
+      value: 1.90187
       objectReference: {fileID: 0}
     - target: {fileID: 2816412970544556735, guid: 92ac052f70b3e4a4a9a69cb328cd824d, type: 3}
       propertyPath: m_LocalPosition.y
