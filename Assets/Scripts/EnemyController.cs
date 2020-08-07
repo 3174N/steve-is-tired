@@ -86,6 +86,7 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator RewindPlayer(PlayerController player)
     {
+        player.StopRewind();
         player.StartRewind(false);
         source.Play();
 

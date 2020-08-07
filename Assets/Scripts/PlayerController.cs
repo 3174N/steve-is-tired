@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     Animator animator;
+    AudioSource source;
 
     bool isHoldingBox;
     GameObject boxNearby;
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
         rewindBar = FindObjectOfType<RewindBar>();
 
         pointsInTime = new List<PointInTime>();
@@ -221,12 +223,15 @@ public class PlayerController : MonoBehaviour
         isRewinding = true;
         rb.isKinematic = true;
         isUsingJuice = usingJuice;
+        if (usingJuice)
+            source.Play();
     }
 
     public void StopRewind()
     {
         isRewinding = false;
         rb.isKinematic = false;
+        source.Stop();
     }
     #endregion
 
