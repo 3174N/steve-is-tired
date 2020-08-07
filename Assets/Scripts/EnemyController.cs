@@ -47,7 +47,8 @@ public class EnemyController : MonoBehaviour
 
         if (randomize)
         {
-            switch ((int)Random.Range(0, 1))
+            int i = (int)Mathf.Round(Random.Range(0, 2));
+            switch (i)
             {
                 case 0:
                     margaretType = Margaret.Margaret;

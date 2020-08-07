@@ -6062,6 +6062,14 @@ PrefabInstance:
       propertyPath: attackRewind
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4160899041270644028, guid: b49d8b2c32de456408e2d7dacacdaab1, type: 3}
+      propertyPath: randomize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160899041270644028, guid: b49d8b2c32de456408e2d7dacacdaab1, type: 3}
+      propertyPath: margaretType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b49d8b2c32de456408e2d7dacacdaab1, type: 3}
 --- !u!1001 &1192984622
