@@ -7,7 +7,7 @@ In *Steve is Tired*, you help Steve from accounting escape the office and his bo
 Along the way, you find a can of *W◂◂RP Energy Drink*, which lets Steve go back to a recent point in time.
 Move boxes, flip switches, and rewind your way to the exit!
 
-This game consists of **$NUMBER** levels, and saves in the loading zone between them. 
+This game consists of 10 levels.
 
 ## Play the game
 This game was made with WebGL in mind, in order to submit it on itch.io. You can play it [here](https://sfr.moe/play).
@@ -27,12 +27,6 @@ Hello. We're the Fourth Men.
 * *Munro* font pack by [Ten by Twenty](https://www.tenbytwenty.com)
   * SIL Open Font licensed, pay-what-you-want font pack for commercial and non-commercial use!
 * Modified *CC-29* Colour palette by Alpha6 on [Lospec](https://lospec.com/palette-list/cc-29)
-
-### Ideas
-9gag for inspiring maymays
-
-### Special thanks
-9gag for funny maymays
 
 ## License & Contributing
 This game is licensed under MIT, which means: **go nuts**.
