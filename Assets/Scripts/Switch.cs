@@ -80,6 +80,8 @@ public class Switch : Trigger
             state = TriggerState.Off;
             timeLimit = maxTimeLimit;
         }
+
+        FindObjectOfType<AudioManager>().Play("Switch");
     }
 
     private void OnTriggerStay2D(Collider2D collision)
