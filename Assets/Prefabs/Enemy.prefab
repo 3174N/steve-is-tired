@@ -213,6 +213,7 @@ MonoBehaviour:
   timeBetweenAttacks: 5
   attackLength: 2
   attackRewind: 0
+  forceFieldColor: {r: 1, g: 0, b: 0, a: 1}
   margaretType: 0
   randomize: 0
   MargaretController: {fileID: 9100000, guid: ffc9bd91981a1c343b68f3031fb23969, type: 2}
