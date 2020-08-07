@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     bool isRewinding;
     bool isUsingJuice;
     List<PointInTime> pointsInTime;
+    [HideInInspector]
+    public bool isBeingRewound;
 
     public KeyCode interactKey = KeyCode.E;
     [HideInInspector]
@@ -105,7 +107,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (rewindTime <= 0.1f)
+        if (rewindTime <= 0.1f && !isBeingRewound)
             StopRewind();
 
         rewindTime = Mathf.Clamp(rewindTime, 0.1f, maxRewindTime);
@@ -209,7 +211,7 @@ public class PlayerController : MonoBehaviour
                 pointsInTime[0].switchSwitched.StateSwitch();
             pointsInTime.RemoveAt(0);
 
-            if (isUsingJuice)
+            if (isUsingJuice && !infiniteRewind)
                 rewindTime -= Time.fixedDeltaTime;
         }
         else

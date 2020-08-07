@@ -87,11 +87,13 @@ public class EnemyController : MonoBehaviour
     IEnumerator RewindPlayer(PlayerController player)
     {
         player.StopRewind();
+        player.isBeingRewound = true;
         player.StartRewind(false);
         source.Play();
 
         yield return new WaitForSeconds(attackRewind);
 
+        player.isBeingRewound = false;
         player.StopRewind();
         source.Stop();
     }
