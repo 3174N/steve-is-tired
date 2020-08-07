@@ -8,8 +8,8 @@ public class EnergyDrink : MonoBehaviour
     public bool isActivatingTextBox;
     public GameObject textBoxToActivate;
 
-    float lifetime = 0f;
-    float Lifetime {get {return lifetime;}}
+    float age = 0f;
+    float Age {get {return age;}}
     #endregion
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class EnergyDrink : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lifetime += Time.deltaTime;
+        age += Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -37,7 +37,7 @@ public class EnergyDrink : MonoBehaviour
         EnergyDrink drink = collision.GetComponent<EnergyDrink>();
         if (drink != null)
         {
-            if (Lifetime > drink.Lifetime)
+            if (Age > drink.Age)
                 Destroy(drink.gameObject);
         }
     }
