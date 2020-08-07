@@ -47,6 +47,9 @@ public class PlayerController : MonoBehaviour
     bool isHoldingBox;
     GameObject boxNearby;
     public GameObject boxPrefab;
+
+    SpriteRenderer sprRend;
+
     #endregion
 
     // Start is called before the first frame update
@@ -71,6 +74,8 @@ public class PlayerController : MonoBehaviour
             lockTime = maxLockTime;
             canMove = false;
         }
+
+        sprRend = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -227,6 +232,8 @@ public class PlayerController : MonoBehaviour
         isUsingJuice = usingJuice;
         if (usingJuice)
             source.Play();
+
+        sprRend.color = new Color(106f, 83f, 110f);
     }
 
     public void StopRewind()
@@ -234,6 +241,7 @@ public class PlayerController : MonoBehaviour
         isRewinding = false;
         rb.isKinematic = false;
         source.Stop();
+        sprRend.color = new Color(255f, 255f, 255f);
     }
     #endregion
 
