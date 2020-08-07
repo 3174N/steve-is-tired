@@ -216,7 +216,7 @@ MonoBehaviour:
   forceFieldColor: {r: 1, g: 0, b: 0, a: 1}
   margaretType: 0
   randomize: 1
-  MargaretController: {fileID: 9100000, guid: ffc9bd91981a1c343b68f3031fb23969, type: 2}
+  MargaretController: {fileID: 22100000, guid: 5f7f395bc6154ef4e9ec63dd07c728e3, type: 2}
   FargaretController: {fileID: 22100000, guid: 9b25213f602f72349a32da191e37a138, type: 2}
 --- !u!82 &479584295535236759
 AudioSource:

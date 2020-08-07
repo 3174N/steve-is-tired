@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using UnityEditor.Animations;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -34,7 +33,7 @@ public class EnemyController : MonoBehaviour
     public Margaret margaretType;
     public bool randomize;
     Animator animator;
-    public AnimatorController MargaretController;
+    public AnimatorOverrideController MargaretController;
     public AnimatorOverrideController FargaretController;
     #endregion
 

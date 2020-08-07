@@ -35,7 +35,6 @@ public class Door : MonoBehaviour
         {
             // Door is open
             boxCollider.isTrigger = true;
-            FindObjectOfType<AudioManager>().Play("Door");
         }
         else
         {
