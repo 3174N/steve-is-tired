@@ -22,7 +22,7 @@ public class Plate : Trigger
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "box" || collision.GetComponent<PlayerController>() || collision.GetComponent<EnemyController>())
         {
