@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour
     public GameObject boxPrefab;
 
     SpriteRenderer sprRend;
-
     #endregion
 
     // Start is called before the first frame update
@@ -233,7 +232,7 @@ public class PlayerController : MonoBehaviour
         if (usingJuice)
             source.Play();
 
-        sprRend.color = Color.black; //new Color(106f, 83f, 110f);
+        sprRend.color = new Color(0.4156863f, 0.3254902f, 0.4313726f, 0.75f);
     }
 
     public void StopRewind()
