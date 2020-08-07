@@ -35,14 +35,12 @@ public class Door : MonoBehaviour
         {
             // Door is open
             boxCollider.isTrigger = true;
-
-            animator.SetTrigger("Open");
         }
         else
         {
             boxCollider.isTrigger = false;
-
-            animator.SetTrigger("Close");
         }
+
+        animator.SetBool("IsOpen", shouldOpen);
     }
 }
