@@ -35,7 +35,7 @@ public class EnemyController : MonoBehaviour
     public bool randomize;
     Animator animator;
     public AnimatorController MargaretController;
-    public AnimatorController FargaretController;
+    public AnimatorOverrideController FargaretController;
     #endregion
 
     // Start is called before the first frame update

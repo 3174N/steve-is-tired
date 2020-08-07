@@ -217,7 +217,7 @@ MonoBehaviour:
   margaretType: 0
   randomize: 0
   MargaretController: {fileID: 9100000, guid: ffc9bd91981a1c343b68f3031fb23969, type: 2}
-  FargaretController: {fileID: 0}
+  FargaretController: {fileID: 22100000, guid: 9b25213f602f72349a32da191e37a138, type: 2}
 --- !u!82 &479584295535236759
 AudioSource:
   m_ObjectHideFlags: 0
