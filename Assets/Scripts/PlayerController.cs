@@ -233,7 +233,7 @@ public class PlayerController : MonoBehaviour
         if (usingJuice)
             source.Play();
 
-        sprRend.color = new Color(106f, 83f, 110f);
+        sprRend.color = Color.black; //new Color(106f, 83f, 110f);
     }
 
     public void StopRewind()
@@ -241,7 +241,7 @@ public class PlayerController : MonoBehaviour
         isRewinding = false;
         rb.isKinematic = false;
         source.Stop();
-        sprRend.color = new Color(255f, 255f, 255f);
+        sprRend.color = Color.white;
     }
     #endregion
 
