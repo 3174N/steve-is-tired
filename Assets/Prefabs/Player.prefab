@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 3300001069215233042, guid: b69fe6e6159da674c817a6349676e140, type: 3}
+  m_Sprite: {fileID: -6112741094762856971, guid: 855b49fa7d7ede640a98a6a126f752cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,6 +157,8 @@ MonoBehaviour:
   maxRewindTime: 5
   recordTime: 5
   rewindSpeedMultiplier: 2
+  isBeingRewound: 0
+  rewindColor: {r: 0.627451, g: 0.23255605, b: 0.627451, a: 0.78431374}
   interactKey: 101
   switchInteractingWith: {fileID: 0}
   lookDirection: {x: 1, y: 0}

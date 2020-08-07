@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     List<PointInTime> pointsInTime;
     [HideInInspector]
     public bool isBeingRewound;
+    public Color rewindColor;
 
     public KeyCode interactKey = KeyCode.E;
     [HideInInspector]
@@ -232,7 +233,7 @@ public class PlayerController : MonoBehaviour
         if (usingJuice)
             source.Play();
 
-        sprRend.color = new Color(0.4156863f, 0.3254902f, 0.4313726f, 0.75f);
+        sprRend.color = rewindColor;
     }
 
     public void StopRewind()
