@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -22,6 +23,17 @@ public class EnemyController : MonoBehaviour
     CircleCollider2D circleCollider;
     Rigidbody2D rb;
     AudioSource source;
+
+    public enum Margaret
+    {
+        Margaret,
+        Fargaret
+    }
+    public Margaret margaretType;
+    public bool randomize;
+    Animator animator;
+    public AnimatorController MargaretController;
+    public AnimatorController FargaretController;
     #endregion
 
     // Start is called before the first frame update
@@ -29,6 +41,33 @@ public class EnemyController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         source = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
+
+        if (randomize)
+        {
+            switch ((int)Random.Range(0, 1))
+            {
+                case 0:
+                    margaretType = Margaret.Margaret;
+                    break;
+                case 1:
+                    margaretType = Margaret.Fargaret;
+                    break;
+                default:
+                    break;
+            }
+        }
+        switch (margaretType)
+        {
+            case Margaret.Margaret:
+                animator.runtimeAnimatorController = MargaretController;
+                break;
+            case Margaret.Fargaret:
+                animator.runtimeAnimatorController = FargaretController;
+                break;
+            default:
+                break;
+        }
 
         circleCollider = gameObject.AddComponent<CircleCollider2D>();
         circleCollider.radius = range / transform.localScale.x;
@@ -104,10 +143,5 @@ public class EnemyController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
         Gizmos.color = prevColor;
-    }
-
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        //rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
     }
 }

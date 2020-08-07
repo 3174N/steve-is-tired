@@ -10,17 +10,27 @@ public class EnemyMovement : MonoBehaviour
 
     int direction = 1;
     Rigidbody2D rb;
+
+    Animator animator;
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-
+        Vector2 lookDirection;
+        if (isVertical)
+            lookDirection = new Vector2(0f, direction);
+        else
+            lookDirection = new Vector2(direction, 0f);
+        animator.SetFloat("Look X", lookDirection.x);
+        animator.SetFloat("Look Y", lookDirection.y);
+        animator.SetFloat("Speed", speed);
     }
 
     void FixedUpdate()
