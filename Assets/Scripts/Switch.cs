@@ -82,7 +82,7 @@ public class Switch : Trigger
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         PlayerController player = collision.GetComponent<PlayerController>();
         if (player != null)
