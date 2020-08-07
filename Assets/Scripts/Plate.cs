@@ -26,10 +26,11 @@ public class Plate : Trigger
     {
         if (collision.tag == "box" || collision.GetComponent<PlayerController>() || collision.GetComponent<EnemyController>())
         {
-            if (collision.isTrigger)
-                return;
-            state = TriggerState.On;
-            FindObjectOfType<AudioManager>().Play("Plate");
+            if (!collision.isTrigger)
+            {
+                state = TriggerState.On;
+                FindObjectOfType<AudioManager>().Play("Plate");
+            }
         }
     }
 
