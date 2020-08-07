@@ -63,6 +63,7 @@ public class EnemyController : MonoBehaviour
     {
         circleCollider.enabled = true;
         isAttacking = true;
+        transform.Find("ForceField").GetComponent<SpriteRenderer>().color=Color.red;
     }
 
     public void StopAttack()
@@ -70,6 +71,7 @@ public class EnemyController : MonoBehaviour
         circleCollider.enabled = false;
         isAttacking = false;
         hasAttacked = false;
+        transform.Find("ForceField").GetComponent<SpriteRenderer>().color=Color.white;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
