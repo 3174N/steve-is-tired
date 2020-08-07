@@ -73,7 +73,7 @@ MonoBehaviour:
     type: 0
     source: {fileID: 0}
   - name: Plate
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: cad3963a9e48d2a4abb693e35a7f24a7, type: 3}
     volume: 1
     pitch: 1
     loop: 0
