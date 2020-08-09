@@ -10,7 +10,7 @@ Move boxes, flip switches, and rewind your way to the exit!
 This game consists of 10 levels.
 
 ## Play the game
-This game was made with WebGL in mind, in order to submit it on itch.io. You can play it [here](https://sfr.moe/play).
+This game was made with WebGL in mind, in order to submit it on itch.io. You can play it [here](https://fourth-men.itch.io/steve-is-tired).
 With that in mind, if you want to install the game locally, you will find releases on the [releases page](https://github.com/SFR-git/steve-is-tired/releases).
 
 ## Credits
