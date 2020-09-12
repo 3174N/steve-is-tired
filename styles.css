@@ -1,9 +1,12 @@
 /* Fonts */
-/* Ubuntu */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
-/* Kalam */
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
-
+@font-face {
+    font-family: Ubuntu;
+    src: url('fonts/Ubuntu/Ubuntu-Light.ttf'); 
+    }
+@font-face {
+    font-family: Kalam;
+    src: url('fonts/Kalam/Kalam-Bold.ttf'); 
+    }
 
 /* Nav-bar */
 header {
